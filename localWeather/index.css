@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    background-color:#411287;
+}
+
+.contentBox {
+    display: flex;
+    align-self: center;
+    min-height: 500px;
+    align-items: center;
+    max-width: 700px;
+}
+
+.headerTitle {
+    color: whitesmoke;
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.weatherDisplay {
+    align-self: flex-end;
+}
