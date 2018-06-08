@@ -1,17 +1,14 @@
-let latitude, longitude;
 
+//This needs to finish before we start the fetch. How??? Put everything in one giant function and use async/await?
 navigator.geolocation.getCurrentPosition(function(position) {
     // do_something(position.coords.latitude, position.coords.longitude);
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
-    console.log("It worked", latitude);
+    let latitude = (position.coords.latitude).toFixed(3);
+    let longitude = (position.coords.longitude).toFixed(3);
+    let url = `https://fcc-weather-api.glitch.me/api/current?lat=${latitude}&lon=${longitude}`;
   });
 
-  //Round lat and long up/down into integer
 
-  //Use template literal to put together the url with the long and lat
-
-  fetch('https://fcc-weather-api.glitch.me/api/current?lat=35&lon=139')
+  fetch(url)
   .then((response) => {
     return response.json();
   })
@@ -22,3 +19,5 @@ navigator.geolocation.getCurrentPosition(function(position) {
   })
 
   //Use .innerText to display this Promise info on the page
+
+  //Catch errors
