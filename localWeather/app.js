@@ -5,9 +5,11 @@ function getLocale() {
     let latitude = (position.coords.latitude).toFixed(3);
     let longitude = (position.coords.longitude).toFixed(3);
     let url = `https://fcc-weather-api.glitch.me/api/current?lat=${latitude}&lon=${longitude}`;
+    return url;
   })
 };
 
+function apiCall () {
   fetch(url)
   .then((response) => {
     return response.json();
@@ -17,6 +19,10 @@ function getLocale() {
     console.log(data.main.temp);
     console.log(data.name, data.sys.country);
   })
+}
+
+getLocale();
+apiCall();
 
   //Use .innerText to display this Promise info on the page
 
