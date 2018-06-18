@@ -1,5 +1,7 @@
 //Add button to be pressed to activate geolocation
 
+const button = document.getElementById('locate');
+
   navigator.geolocation.getCurrentPosition(function(position) {
     let latitude = (position.coords.latitude).toFixed(3);
     let longitude = (position.coords.longitude).toFixed(3);

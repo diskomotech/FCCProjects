@@ -15,8 +15,11 @@ body {
     text-align: center;
 }
 
-.headerTitle {
-    color: whitesmoke;
+.headerTitle, .weatherDisplay {
+    background-color: whitesmoke;
+}
+
+.headerTitle { 
     font-size: 2rem;
     margin-top: 15px;
     border: solid yellow 2px;
