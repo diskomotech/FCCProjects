@@ -1,13 +1,13 @@
-//Add button to be pressed to activate geolocation
-
 const button = document.getElementById('locate');
 
+button.addEventListener('click', () => {
   navigator.geolocation.getCurrentPosition(function(position) {
     let latitude = (position.coords.latitude).toFixed(3);
     let longitude = (position.coords.longitude).toFixed(3);
     let url = `https://fcc-weather-api.glitch.me/api/current?lat=${latitude}&lon=${longitude}`;
+    console.log(url);
     
-    let apiCall = function () {
+    (function apiCall () {
       fetch(url)
       .then((response) => {
         return response.json();
@@ -18,8 +18,9 @@ const button = document.getElementById('locate');
         console.log(data.name, data.sys.country);
       })
       .catch(err => console.log('ughhhh fix it!', err));
-    }
+    })();
   })
+})
 
   //Use .innerText to display this Promise info on the page
 
