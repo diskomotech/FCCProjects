@@ -37,3 +37,7 @@ h1 {
     font-size: 1.8rem;
     margin-bottom: 40px;
 }
+
+button {
+   margin-bottom: 20px; 
+}
