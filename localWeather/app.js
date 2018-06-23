@@ -16,9 +16,7 @@ button.addEventListener('click', () => {
       })
       .then((data) => {
         locationDiv.innerText = `${data.name} ${data.sys.country}`;
-        
-        //Round number & then add Centigrade clickable element
-        tempDiv.innerText = data.main.temp;
+        tempDiv.innerHTML = '<p>' + Math.round(data.main.temp) + '°<a href="">C</a></p>'
 
         //Do something here to display different icon depending on the weather
         weatherDiv.innerText = data.weather[0].main;
@@ -28,7 +26,3 @@ button.addEventListener('click', () => {
     })();
   })
 })
-
-  //Use .innerText to display this Promise info on the page
-
-  //Catch errors
