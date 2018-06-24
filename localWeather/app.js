@@ -28,9 +28,10 @@ button.addEventListener('click', () => {
         weatherDiv.innerText = data.weather[0].main;
         
       })
-      .then((result) => {
+      .then(() => {
         let temperature = document.querySelector(".temp");
         let fahrenheit = Math.round(celsius * 1.8) + 32;
+
         temperature.addEventListener('click', () => {
           if (temperature.innerText.includes('°C')) {
             temperature.innerHTML = '<p>' + fahrenheit + '°<a href="#" onclick="return false;">F</a></p>';
@@ -38,7 +39,6 @@ button.addEventListener('click', () => {
           else {
             temperature.innerHTML = '<p>' + celsius + '°<a href="#" onclick="return false;">C</a></p>';
           }
-          
         })
       })
       .catch(err => console.log('ughhhh fix it!', err));
