@@ -1,6 +1,7 @@
 const button = document.getElementById('locate');
 const locationDiv = document.querySelector('.location');
 const weatherDiv = document.querySelector('.weather');
+let celsius;
 
 button.addEventListener('click', () => {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -18,7 +19,8 @@ button.addEventListener('click', () => {
 
         let div = document.createElement('div');
         div.className = "temp";
-        div.innerHTML = '<p>' + Math.round(data.main.temp) + '°<a href="#" onclick="return false;">C</a></p>';
+        celsius = Math.round(data.main.temp);
+        div.innerHTML = '<p>' + celsius + '°<a href="#" onclick="return false;">C</a></p>';
         locationDiv.after(div);
 
         //Do something here to display different icon depending on the weather
@@ -28,7 +30,9 @@ button.addEventListener('click', () => {
       .then((result) => {
         let temperature = document.querySelector(".temp");
         temperature.addEventListener('click', () => {
-          console.log('it worked');
+          console.log(celsius);
+          // let fahrenheit = (data.main.temp * 1.8) + 32;
+          // console.log(fahrenheit);
         })
       })
       .catch(err => console.log('ughhhh fix it!', err));
