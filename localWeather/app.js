@@ -1,6 +1,4 @@
 const button = document.getElementById('locate');
-const locationDiv = document.querySelector('.location');
-const weatherDiv = document.querySelector('.weather');
 let celsius;
 
 button.addEventListener('click', () => {
@@ -15,9 +13,12 @@ button.addEventListener('click', () => {
         return response.json();
       })
       .then((data) => {
+        const locationDiv = document.querySelector('.location');
+        const weatherDiv = document.querySelector('.weather');
+        let div = document.createElement('div');
+        
         locationDiv.innerText = `${data.name} ${data.sys.country}`;
 
-        let div = document.createElement('div');
         div.className = "temp";
         celsius = Math.round(data.main.temp);
         div.innerHTML = '<p>' + celsius + '°<a href="#" onclick="return false;">C</a></p>';
