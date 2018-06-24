@@ -26,6 +26,10 @@ button.addEventListener('click', () => {
 
         //Do something here to display different icon depending on the weather
         weatherDiv.innerText = data.weather[0].main;
+
+        if (weatherDiv.innerText === 'Clouds') {
+          document.querySelector('#cloudy').classList.toggle('iconVisible');
+        }
         
       })
       .then(() => {

@@ -40,3 +40,11 @@ h1 {
 button {
    margin-bottom: 20px; 
 }
+
+.iconVisible {
+    display: none;
+}
+
+.iconStyle {
+    font-size: 60px;
+}
