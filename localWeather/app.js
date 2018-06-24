@@ -1,6 +1,5 @@
 const button = document.getElementById('locate');
 const locationDiv = document.querySelector('.location');
-// const tempDiv = document.querySelector('.temp');
 const weatherDiv = document.querySelector('.weather');
 
 button.addEventListener('click', () => {
@@ -26,9 +25,13 @@ button.addEventListener('click', () => {
         weatherDiv.innerText = data.weather[0].main;
         
       })
+      .then((result) => {
+        let temperature = document.querySelector(".temp");
+        temperature.addEventListener('click', () => {
+          console.log('it worked');
+        })
+      })
       .catch(err => console.log('ughhhh fix it!', err));
     })();
   })
-
-  // document.querySelector(".temp").addEventListener('click', () => console.log('it worked'));
 })
