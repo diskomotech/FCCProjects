@@ -1,8 +1,7 @@
 const button = document.getElementById('locate');
 const locationDiv = document.querySelector('.location');
-const tempDiv = document.querySelector('.temp');
+// const tempDiv = document.querySelector('.temp');
 const weatherDiv = document.querySelector('.weather');
-
 
 button.addEventListener('click', () => {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -18,8 +17,10 @@ button.addEventListener('click', () => {
       .then((data) => {
         locationDiv.innerText = `${data.name} ${data.sys.country}`;
 
-        //Rather than innerHTML, I think I need to create new element and then insert into the DOM tree
-        tempDiv.innerHTML = '<p>' + Math.round(data.main.temp) + '°<a href="#" onclick="return false;">C</a></p>'
+        let div = document.createElement('div');
+        div.className = "temp";
+        div.innerHTML = '<p>' + Math.round(data.main.temp) + '°<a href="#" onclick="return false;">C</a></p>';
+        locationDiv.after(div);
 
         //Do something here to display different icon depending on the weather
         weatherDiv.innerText = data.weather[0].main;
@@ -29,5 +30,5 @@ button.addEventListener('click', () => {
     })();
   })
 
-  document.querySelector("a[href='#']").addEventListener('click', () => console.log('it worked'));
+  // document.querySelector(".temp").addEventListener('click', () => console.log('it worked'));
 })
