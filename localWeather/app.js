@@ -29,10 +29,15 @@ button.addEventListener('click', () => {
       })
       .then((result) => {
         let temperature = document.querySelector(".temp");
+        let fahrenheit = Math.round(celsius * 1.8) + 32;
         temperature.addEventListener('click', () => {
-          console.log(celsius);
-          // let fahrenheit = (data.main.temp * 1.8) + 32;
-          // console.log(fahrenheit);
+          if (temperature.innerText.includes('°C')) {
+            temperature.innerHTML = '<p>' + fahrenheit + '°<a href="#" onclick="return false;">F</a></p>';
+          }
+          else {
+            temperature.innerHTML = '<p>' + celsius + '°<a href="#" onclick="return false;">C</a></p>';
+          }
+          
         })
       })
       .catch(err => console.log('ughhhh fix it!', err));
