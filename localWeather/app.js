@@ -30,6 +30,26 @@ button.addEventListener('click', () => {
         if (weatherDiv.innerText === 'Clouds') {
           document.querySelector('#cloudy').classList.toggle('iconVisible');
         }
+
+        if (weatherDiv.innerText === 'Sunny' || weatherDiv.innerText === 'Clear') {
+          document.querySelector('#sunny').classList.toggle('iconVisible');
+        }
+
+        if (weatherDiv.innerText === 'Thunderstorm') {
+          document.querySelector('#stormy').classList.toggle('iconVisible');
+        }
+
+        if (weatherDiv.innerText === 'Snow') {
+          document.querySelector('#snow').classList.toggle('iconVisible');
+        }
+
+        if (weatherDiv.innerText === 'Rain') {
+          document.querySelector('#rainy').classList.toggle('iconVisible');
+        }
+
+        if (weatherDiv.innerText === 'SunRain') {
+          document.querySelector('#sunRain').classList.toggle('iconVisible');
+        }
         
       })
       .then(() => {
