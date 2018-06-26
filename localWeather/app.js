@@ -47,9 +47,9 @@ button.addEventListener('click', () => {
           document.querySelector('#rainy').classList.toggle('iconVisible');
         }
 
-        if (weatherDiv.innerText === 'SunRain') {
-          document.querySelector('#sunRain').classList.toggle('iconVisible');
-        }
+        // if (weatherDiv.innerText === 'SunRain') {
+        //   document.querySelector('#sunRain').classList.toggle('iconVisible');
+        // }
         
       })
       .then(() => {
