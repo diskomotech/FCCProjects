@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+    flex-direction: column;
+}
+
+.wrapper {
+    /* display: flex; */
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+}
