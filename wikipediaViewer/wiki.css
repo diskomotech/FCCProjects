@@ -1,14 +1,12 @@
 body {
-    display: flex;
-    height: 100vh;
     font-family: Helvetica, sans-serif;
-    flex-direction: column;
 }
 
-.wrapper {
-    /* display: flex; */
+.container {
+    display: flex;
+    height: 100vh;
+    min-width: 100vw;
     flex-direction: column;
-    align-self: center;
+    justify-content: center;
     align-items: center;
-    text-align: center;
 }
