@@ -6,7 +6,24 @@ body {
     display: flex;
     height: 100vh;
     min-width: 100vw;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBox {
+    display: flex;
+    width: 430px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#magnifyIcon {
+    font-size: 40px;
+    padding: 10px 0;
+}
+
+#searchText {
+    margin: 5px 0;
 }
