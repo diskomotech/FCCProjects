@@ -1,7 +1,4 @@
 
-- Event listener on search box for enter key press
-- Grab search text and save in variable
-
 - Make API call to Wikipedia using search term
 - Display previews of Wikipedia articles on your page
 - Allow click though to articles - open new browser tabs
