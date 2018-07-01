@@ -2,7 +2,6 @@
 - Make API call and display random Wiki article
 - Open up fresh tab with random article
 
-- Have cursor automatically on search box so user doesn't have to click into box
 - Event listener on search box for enter key press
 - Grab search text and save in variable
 
