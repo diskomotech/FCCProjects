@@ -1,6 +1,3 @@
-- Add event listener for random text
-- Make API call and display random Wiki article
-- Open up fresh tab with random article
 
 - Event listener on search box for enter key press
 - Grab search text and save in variable
