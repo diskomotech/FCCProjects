@@ -9,6 +9,12 @@ randomText.addEventListener('click', () => {
 searchBox.addEventListener('keypress', (event) => {
     if (event.which === 13) {
         let searchText = searchBox.value;
-        console.log(searchText);
-    }
+        let searchUrl = `https://en.wikipedia.org/w/api.php?action=query&titles=${searchText}&format=jsonfm&formatversion=2`;
+        
+        fetch(searchUrl, {mode: 'no-cors'})
+        .then(((response) => {
+            return response.json();
+        })
+    )}
+        // window.open(`https://en.wikipedia.org/wiki/${searchText}`);
 });
