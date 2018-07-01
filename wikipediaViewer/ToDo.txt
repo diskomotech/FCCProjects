@@ -1,0 +1,19 @@
+- Add event listener for random text
+- Make API call and display random Wiki article
+- Open up fresh tab with random article
+
+- Have cursor automatically on search box so user doesn't have to click into box
+- Event listener on search box for enter key press
+- Grab search text and save in variable
+
+- Make API call to Wikipedia using search term
+- Display previews of Wikipedia articles on your page
+- Allow click though to articles - open new browser tabs
+
+- Hide search box
+- Event Listener on magniying glass icon
+- Have search box appear and potentially icon disappear on click
+- Add animation to make it look smooth
+- Add cancel button to allow user to put page back the way it looked on load?
+
+- Make it look nice!
