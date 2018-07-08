@@ -23,10 +23,15 @@ searchBox.addEventListener('keypress', (event) => {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-            data.forEach(function(val) {
-                html += "<div class = 'wikiEntries'>";
-                html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>";
-                html += "</div>";
+            const headings = data[1];
+            const abstract = data[2];
+            const wikiLink = data[3];
+
+            headings.forEach(function(value) {
+                html += `<div class = 'wikiEntries'>
+                <h3>${value}</h3>
+                </div>`;
+            
                 resultsBox.innerHTML = html;
               });
         })     
