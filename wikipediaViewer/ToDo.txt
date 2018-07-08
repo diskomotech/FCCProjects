@@ -1,5 +1,4 @@
 
-- Make API call to Wikipedia using search term
 - Display previews of Wikipedia articles on your page
 - Allow click though to articles - open new browser tabs
 
