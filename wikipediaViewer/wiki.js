@@ -14,13 +14,11 @@ searchBox.addEventListener('keypress', (event) => {
         let searchText = searchBox.value;
 
         //Compile Wiki page url
-        let searchUrl = `https://en.wikipedia.org//w/api.php?action=opensearch&format=json&origin=*&search=${searchText}&limit=10`
+        let searchUrl = `https://en.wikipedia.org//w/api.php?action=opensearch&format=json&origin=*&search=${searchText}&limit=6`
         
         //Fetch Wiki API data and convert to JSON
         fetch(searchUrl)
-        .then((response) => {
-            return response.json();
-          })
+        .then((response) => response.json())
         .then((data) => console.log(data))
     }
         // window.open(`https://en.wikipedia.org/wiki/${searchText}`);
