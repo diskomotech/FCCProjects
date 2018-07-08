@@ -1,6 +1,8 @@
 const randomText = document.querySelector('#random');
 const randomUrl = 'https://en.wikipedia.org/wiki/Special:Random';
 const searchBox = document.querySelector('#searchBox');
+const resultsBox = document.querySelector('.resultsBox');
+let html = '';
 
 //Random Wiki article feature
 randomText.addEventListener('click', () => {
@@ -19,7 +21,15 @@ searchBox.addEventListener('keypress', (event) => {
         //Fetch Wiki API data and convert to JSON
         fetch(searchUrl)
         .then((response) => response.json())
-        .then((data) => console.log(data))
+        .then((data) => {
+            console.log(data);
+            data.forEach(function(val) {
+                html += "<div class = 'wikiEntries'>";
+                html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>";
+                html += "</div>";
+                resultsBox.innerHTML = html;
+              });
+        })     
     }
         // window.open(`https://en.wikipedia.org/wiki/${searchText}`);
 });

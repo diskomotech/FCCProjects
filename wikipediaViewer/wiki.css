@@ -30,3 +30,7 @@ body {
 #random {
     cursor: pointer;
 }
+
+.wikiEntries {
+    color: red;
+}
