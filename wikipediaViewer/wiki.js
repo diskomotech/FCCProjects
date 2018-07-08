@@ -27,11 +27,10 @@ searchBox.addEventListener('keypress', (event) => {
             const abstract = data[2];
             const wikiLink = data[3];
 
-            headings.forEach(function(value) {
-                html += `<div class = 'wikiEntries'>
-                <h3>${value}</h3>
-                </div>`;
-            
+            data.forEach((value) => {
+                html += `<div class = 'wikiEntries'>`;
+                data[1].forEach((heading) => { html += `<h3>${heading}</h3>` });
+                data[2].forEach((abstract) => { html += `<p>${abstract}</p></div>`})
                 resultsBox.innerHTML = html;
               });
         })     
