@@ -23,16 +23,13 @@ searchBox.addEventListener('keypress', (event) => {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-            const headings = data[1];
-            const abstract = data[2];
-            const wikiLink = data[3];
 
-            data.forEach((value) => {
+            for (let i = 0; i < data[1].length; i++) {
                 html += `<div class = 'wikiEntries'>`;
-                data[1].forEach((heading) => { html += `<h3>${heading}</h3>` });
-                data[2].forEach((abstract) => { html += `<p>${abstract}</p></div>`})
+                html += `<h3>${data[1][i]}</h3>`;
+                html += `<p>${data[2][i]}</p></div>`;
                 resultsBox.innerHTML = html;
-              });
+            }
         })     
     }
         // window.open(`https://en.wikipedia.org/wiki/${searchText}`);
