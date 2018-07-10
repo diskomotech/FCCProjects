@@ -26,11 +26,10 @@ searchBox.addEventListener('keypress', (event) => {
 
             for (let i = 0; i < data[1].length; i++) {
                 html += `<div class = 'wikiEntries'>`;
-                html += `<h3>${data[1][i]}</h3>`;
+                html += `<a href="${data[3][i]}" target="_blank">${data[1][i]}</a>`
                 html += `<p>${data[2][i]}</p></div>`;
                 resultsBox.innerHTML = html;
             }
         })     
     }
-        // window.open(`https://en.wikipedia.org/wiki/${searchText}`);
 });
