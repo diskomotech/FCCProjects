@@ -32,13 +32,15 @@ body {
     cursor: pointer;
 }
 
+.resultsBox {
+    padding-top: 20px;
+}
+
 .wikiEntries {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     max-width: 800px;
     justify-content: center;
     align-items: center;
-}
-
-.resultsBox {
-    padding-top: 20px;
+    padding: 5px 0 0 10px;
+    border-bottom: 10px;
 }
