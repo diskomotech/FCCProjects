@@ -38,6 +38,10 @@ body {
     padding-top: 20px;
 }
 
+#searchBox {
+    display: none;
+}
+
 .wikiEntries {
     /* border: 2px solid black; */
     max-width: 800px;

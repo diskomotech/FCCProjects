@@ -2,11 +2,17 @@ const randomText = document.querySelector('#random');
 const randomUrl = 'https://en.wikipedia.org/wiki/Special:Random';
 const searchBox = document.querySelector('#searchBox');
 const resultsBox = document.querySelector('.resultsBox');
+const magnifyIcon = document.querySelector('#magnifyIcon');
 let html = '';
 
 //Random Wiki article feature
 randomText.addEventListener('click', () => {
     window.open(randomUrl);
+});
+
+//Press magnifying glass icon to reveal search box
+magnifyIcon.addEventListener('click', () => {
+    searchBox.style.display = 'inline';
 });
 
 //Listen for Enter keypress in search box
