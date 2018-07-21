@@ -1,6 +1,4 @@
 
-- Allow click though to articles - open new browser tabs
-
 - Hide search box
 - Event Listener on magniying glass icon
 - Have search box appear and potentially icon disappear on click
@@ -8,3 +6,5 @@
 - Add cancel button to allow user to put page back the way it looked on load?
 
 - Make it look nice!
+- Round off corners
+- Sort out padding and general spacing
