@@ -26,6 +26,11 @@ body {
     padding: 10px 0;
 }
 
+#magnifyIcon:hover {
+    font-size: 50px;
+    padding: 5px 0;
+}
+
 #searchText {
     margin: 5px 0;
 }
