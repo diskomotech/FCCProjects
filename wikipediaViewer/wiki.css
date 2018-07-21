@@ -2,6 +2,11 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
+p {
+    margin-bottom: 0;
+    text-align: justify;
+}
+
 .container {
     display: flex;
     min-height: 100vh;
@@ -37,6 +42,7 @@ body {
 
 #random {
     cursor: pointer;
+    margin-top: 25px;
 }
 
 .resultsBox {
@@ -45,15 +51,15 @@ body {
 
 #searchBox {
     display: none;
+    margin: 10px 0 5px 0;
 }
 
 .wikiEntries {
-    /* border: 2px solid black; */
     max-width: 800px;
     justify-content: center;
     align-items: center;
-    padding: 5px 0 0 10px;
-    border-bottom: 10px;
+    padding: 10px 15px 15px 15px;
+    margin-bottom: 20px;
     background-color: #feff89; 
     color: #7c203a;
     border-radius: 5px;
