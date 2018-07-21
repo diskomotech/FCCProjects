@@ -31,14 +31,12 @@ searchBox.addEventListener('keypress', (event) => {
         fetch(searchUrl)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
-
             for (let i = 0; i < data[1].length; i++) {
-                html += `<div class = 'wikiEntries'>`;
+                html += `<div class = 'wikiEntries transitionFX'>`;
                 html += `<a href="${data[3][i]}" target="_blank">${data[1][i]}</a>`
-                html += `<p>${data[2][i]}</p></div>`;
+                html += `<p>${data[2][i]}</p></div>`; 
                 resultsBox.innerHTML = html;
             }
-        })     
+        })
     }
 });
