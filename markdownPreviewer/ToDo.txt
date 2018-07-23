@@ -1,0 +1,2 @@
+- Add event listener to textarea for any keypress
+- Automatically display any text in preview
