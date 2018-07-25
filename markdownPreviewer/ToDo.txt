@@ -1,5 +1,4 @@
 - Work how to parse markdown into HTML
-- Add titles for the two boxes
 - Add full screen button for editor
 - Allow easy resizing of previewer
 
@@ -10,3 +9,5 @@ an image, and bolded text.
 
 - When my markdown previewer first loads, the default markdown in the #editor field should be rendered as 
 HTML in the #preview element.
+
+- MAKE IT LOOK NICE

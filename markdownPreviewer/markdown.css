@@ -17,10 +17,25 @@ body {
     height: 200px;
     background-color: blanchedalmond;
     margin-bottom: 50px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+#editorTitle {
+    background-color: blanchedalmond;
+    width: 600px;
+    margin: 0;
 }
 
 #preview {
     width: 600px;
     height: 400px;
     background-color: beige;
+}
+
+#previewTitle {
+    background-color: beige;
+    width: 600px;
+    margin: 0;
 }
