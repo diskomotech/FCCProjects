@@ -1,4 +1,3 @@
-- Tighten up displaying of editor text in previewer window so less 'lag'
 - Work how to parse markdown into HTML
 - Add titles for the two boxes
 - Add full screen button for editor
