@@ -1,6 +1,5 @@
 - Work how to parse markdown into HTML
-- Add full screen button for editor
-- Allow easy resizing of previewer
+- Add full screen button for editor and previewer
 
 - When my markdown previewer first loads, the default text in the #editor field should 
 contain valid markdown that represents at least one of each of the following elements: a header 

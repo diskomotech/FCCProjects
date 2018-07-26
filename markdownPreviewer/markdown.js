@@ -1,7 +1,8 @@
 const editor = document.querySelector('#editor');
 const previewer = document.querySelector('#preview');
 
-editor.addEventListener('input', () => {
-    let editorText = editor.value;
-    previewer.innerHTML = editorText;
-});
+//Placeholder text displaying in previewer when page loads
+previewer.innerHTML = editor.value
+
+//Listen for keyboard changes and update previewer window
+editor.addEventListener('input', () => previewer.innerHTML = editor.value);
