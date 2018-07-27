@@ -1,9 +1,7 @@
 
-
 let myMarkUp = "# Welcome to my Markdown Previewer! \n## This is a sub-heading... \n### And here's some other cool stuff";
 
 const text = editor.value;
-
 const match = /\r|\n/.exec(text);
 const regEx = /\r|\n/;
 console.log(match);
