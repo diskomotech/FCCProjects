@@ -1,6 +1,6 @@
 - Work how to parse markdown into HTML
--- Read markdown rules
 -- Set up JS variables with h1 etc and work out the problematic areas
+-- Problems with multi-line code - code block and lists. Block quote too maybe.
 -- Create parsing function to deal with our input. Will need to separate the input line by line
 
 - Add full screen button for editor and previewer
