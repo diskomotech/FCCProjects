@@ -1,4 +1,8 @@
 - Work how to parse markdown into HTML
+-- Read markdown rules
+-- Set up JS variables with h1 etc and work out the problematic areas
+-- Create parsing function to deal with our input. Will need to separate the input line by line
+
 - Add full screen button for editor and previewer
 
 - When my markdown previewer first loads, the default text in the #editor field should 
