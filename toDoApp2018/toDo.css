@@ -17,3 +17,12 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+#textInput {
+    margin-bottom: 10px;
+}
+
+.completed {
+    color: darkred;
+    text-decoration: line-through;
+}
