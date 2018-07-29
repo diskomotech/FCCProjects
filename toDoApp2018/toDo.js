@@ -1,5 +1,6 @@
 const ul = document.querySelector('ul');
 const textInput = document.querySelector("#textInput");
+let newToDoItem = "";
 
 ul.addEventListener("click", (event) => {
     if (event.target.tagName == "LI") {
@@ -7,3 +8,8 @@ ul.addEventListener("click", (event) => {
     }
 });
 
+textInput.addEventListener("keypress", (event) => {
+    if (event.which === 13) {
+       newToDoItem = textInput.value;
+    }
+});
