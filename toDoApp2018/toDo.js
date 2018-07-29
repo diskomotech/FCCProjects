@@ -1,16 +1,9 @@
-const li = document.getElementsByTagName('li')[0];
+const ul = document.querySelector('ul');
 const textInput = document.querySelector("#textInput");
 
-// items.addEventListener("click", (element) => {
-//     element.classList.toggle("completed")
-// });
+ul.addEventListener("click", (event) => {
+    if (event.target.tagName == "LI") {
+        event.target.classList.toggle("completed");
+    }
+});
 
-li.addEventListener("click", (event) => {
-    console.log("Working");
-})
-
-// li.forEach(() => {
-//     ul[i].addEventListener("click", (event) => {
-//         console.log("Working");
-//     })
-// });
