@@ -18,6 +18,10 @@ body {
     align-items: center;
 }
 
+li {
+    list-style-type: none;
+}
+
 #textInput {
     margin-bottom: 10px;
 }
@@ -26,3 +30,4 @@ body {
     color: darkred;
     text-decoration: line-through;
 }
+
