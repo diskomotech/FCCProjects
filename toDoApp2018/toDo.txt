@@ -1,6 +1,5 @@
-- Add delete button functionality
-- Deleting items (use event object and stopPropagation to stop event bubbling) (use parent fadeOut and remove)
-- Add delete button to each new list item
+- Deleting items (use event object and stopPropagation to stop event bubbling)
 - Styling
-- Toggle the form
-- Responsive
+- Animations
+- Toggle the form visibility
+- Responsive?
