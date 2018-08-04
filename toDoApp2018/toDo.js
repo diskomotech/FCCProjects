@@ -30,6 +30,6 @@ textInput.addEventListener("keypress", (event) => {
 
 ul.addEventListener("click", (event) => {
     if (event.target.tagName == "SPAN") {
-        console.log("Nailed it");
+        console.log("Working");
     }
 });
