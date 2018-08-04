@@ -1,5 +1,6 @@
+- Add delete button functionality
 - Deleting items (use event object and stopPropagation to stop event bubbling) (use parent fadeOut and remove)
-- Creating items (keypress event for Enter key [if event.which === 13]) (grab val and append to ul)
+- Add delete button to each new list item
 - Styling
 - Toggle the form
 - Responsive
