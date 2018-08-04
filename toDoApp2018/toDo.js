@@ -1,6 +1,4 @@
 const ul = document.querySelector("ul");
-const textInput = document.querySelector("#textInput");
-let newToDoItem = "";
 
 ul.addEventListener("click", (event) => {
     if (event.target.tagName == "LI") {
@@ -12,10 +10,11 @@ textInput.addEventListener("keypress", (event) => {
     if (event.which === 13) {
         //Create new DOM elements to be added to UL
        const li = document.createElement("li");
+       const textInput = document.querySelector("#textInput");
        const newSpan = document.createElement("span");
 
         //Save text input in var
-       newToDoItem = textInput.value;
+       let newToDoItem = textInput.value;
 
        //Add (temporary) X delete button to span
        newSpan.append("X ");
