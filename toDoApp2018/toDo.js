@@ -10,14 +10,21 @@ ul.addEventListener("click", (event) => {
 
 textInput.addEventListener("keypress", (event) => {
     if (event.which === 13) {
+        //Create new DOM elements to be added to UL
+       let li = document.createElement("li");
+       let span = document.createElement("span");
+
         //Save text input in var
        newToDoItem = textInput.value;
-       
-       //Create new DOM element to be added to UL
-       let li = document.createElement("li");
+
+       //Add (temporary) X delete button to span
+       span.append("X ");
        
        //Append the LI to UL and add text input
-       ul.appendChild(li).append(newToDoItem);
+       ul.appendChild(li).append(span, newToDoItem);
+
+       //Clear text input box once everything is done
+       textInput.value = "";
 
     }
 });
