@@ -1,4 +1,4 @@
-const ul = document.querySelector('ul');
+const ul = document.querySelector("ul");
 const textInput = document.querySelector("#textInput");
 let newToDoItem = "";
 
@@ -19,12 +19,17 @@ textInput.addEventListener("keypress", (event) => {
 
        //Add (temporary) X delete button to span
        newSpan.append("X ");
-       
+
        //Append the LI to UL and add text input
        ul.appendChild(li).append(newSpan, newToDoItem);
 
        //Clear text input box once everything is done
        textInput.value = "";
+    }
+});
 
+ul.addEventListener("click", (event) => {
+    if (event.target.tagName == "SPAN") {
+        console.log("Nailed it");
     }
 });
