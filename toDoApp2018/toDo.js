@@ -10,8 +10,8 @@ textInput.addEventListener("keypress", (event) => {
     if (event.which === 13) {
         //Create new DOM elements to be added to UL
        const li = document.createElement("li");
-       const textInput = document.querySelector("#textInput");
        const newSpan = document.createElement("span");
+       const textInput = document.querySelector("#textInput");
 
         //Save text input in var
        let newToDoItem = textInput.value;
