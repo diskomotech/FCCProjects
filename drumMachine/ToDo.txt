@@ -1,3 +1,4 @@
+- Find sound library to use (having local files won't work on CodePen)
 - Setup display bar for text
 - Setup 9 divs for drum pads with styling
 - Add event listeners for each pad - keyboard button and click
