@@ -1,7 +1,5 @@
-- Work out how to host your sounds somewhere online to reference or use someone else's (Wes Bos)
-- Setup display bar for text
-- Setup 9 divs for drum pads with styling
 - Add event listeners for each pad - keyboard button and click
+- Work out how to host your sounds somewhere online to reference or use someone else's (Wes Bos)
 - Trigger sounds for each one
 - Display text in display bar when each pad is triggered
 - Make it look nice

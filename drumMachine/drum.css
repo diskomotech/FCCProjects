@@ -2,11 +2,6 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
-p {
-    margin-bottom: 0;
-    text-align: justify;
-}
-
 .container {
     display: flex;
     min-height: 100vh;
@@ -14,6 +9,13 @@ p {
     justify-content: center;
     align-items: center;
     background-color:lightskyblue;
+}
+
+.display {
+    height: 40px;
+    width: 220px;
+    background-color: white;
+    margin: 10px 0;
 }
 
 .grid {
@@ -29,4 +31,7 @@ p {
     height: 70px;
     background-color: white;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
