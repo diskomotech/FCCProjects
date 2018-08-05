@@ -1,0 +1,6 @@
+- Setup display bar for text
+- Setup 9 divs for drum pads with styling
+- Add event listeners for each pad - keyboard button and click
+- Trigger sounds for each one
+- Display text in display bar when each pad is triggered
+- Make it look nice

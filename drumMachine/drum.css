@@ -1,0 +1,26 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+p {
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:lightskyblue;
+}
+
+#drumMachine {
+    display: flex;
+    width: 430px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
