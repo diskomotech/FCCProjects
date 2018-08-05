@@ -13,7 +13,6 @@ p {
     min-width: 100vw;
     justify-content: center;
     align-items: center;
-    /* flex-direction: column; */
     background-color:lightskyblue;
 }
 
@@ -21,12 +20,13 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 270px;
+    border: 2px red solid;
   }
 
 .drum-pad {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background-color: white;
     margin: 5px;
-    /* flex: 0 0 33%; */
 }
