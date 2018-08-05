@@ -1,5 +1,3 @@
-- Sign up for AWS
-- Upload files to AWS
 - Work out how to play sounds without Howler
 
 - Add event listeners for each pad - keyboard button and click
