@@ -1,3 +1,8 @@
+- Convert all sound files to mp3
+- Sign up for AWS
+- Upload files to AWS
+- Work out how to play sounds without Howler
+
 - Add event listeners for each pad - keyboard button and click
 - Work out how to host your sounds somewhere online to reference or use someone else's (Wes Bos)
 - Trigger sounds for each one
