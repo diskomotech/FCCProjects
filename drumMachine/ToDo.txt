@@ -1,4 +1,3 @@
-- Convert all sound files to mp3
 - Sign up for AWS
 - Upload files to AWS
 - Work out how to play sounds without Howler
