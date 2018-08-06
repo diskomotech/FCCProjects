@@ -25,34 +25,18 @@ const playIt = function (url) {
 
 qButton.addEventListener('click', () => playIt(snare));
 
-// wButton.addEventListener('click', () => {
-//     playIt('https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3');
-// });
+wButton.addEventListener('click', () => playIt(tom));
 
-// eButton.addEventListener('click', () => {
-//     playIt('https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3');
-// });
+eButton.addEventListener('click', () => playIt(tink));
 
-// aButton.addEventListener('click', () => {
-//     playIt('https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3');
-// });
+aButton.addEventListener('click', () => playIt(kick));
 
-// sButton.addEventListener('click', () => {
-//     playIt('https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3');
-// });
+sButton.addEventListener('click', () => playIt(boom));
 
-// dButton.addEventListener('click', () => {
-//     playIt('https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3');
-// });
+dButton.addEventListener('click', () => playIt(hihat));
 
-// zButton.addEventListener('click', () => {
-//     playIt('https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3');
-// });
+zButton.addEventListener('click', () => playIt(ride));
 
-// xButton.addEventListener('click', () => {
-//     playIt('https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3');
-// });
+xButton.addEventListener('click', () => playIt(openhat));
 
-// cButton.addEventListener('click', () => {
-//     playIt('https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3');
-// });
+cButton.addEventListener('click', () => playIt(clap));
