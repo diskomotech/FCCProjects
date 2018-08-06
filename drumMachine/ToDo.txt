@@ -1,4 +1,3 @@
-- Work out best order of sounds
-- Add event listeners for each pad - keyboard button and click
-- Display text in display bar when each pad is triggered
+- Event listeners for keyboard button press
+- Display text in display bar when each pad is triggered (add to PlayIt function)
 - Make it look nice
