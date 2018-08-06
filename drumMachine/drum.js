@@ -7,7 +7,6 @@ const dButton = document.querySelector("#D");
 const zButton = document.querySelector("#Z");
 const xButton = document.querySelector("#X");
 const cButton = document.querySelector("#C");
-
 const snare = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/snare.mp3";
 const tom = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/tom.mp3";
 const tink = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/tink.mp3";
@@ -17,6 +16,7 @@ const hihat = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumM
 const ride = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/ride.mp3";
 const openhat = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/openhat.mp3";
 const clap = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3";
+const display = document.querySelector(".display");
 
 const playIt = function (url) {
     const player = new SoundPlayer();
