@@ -18,25 +18,26 @@ const openhat = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/dru
 const clap = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3";
 const display = document.querySelector(".display");
 
-const playIt = function (url) {
+const playIt = function (url, text) {
     const player = new SoundPlayer();
     player.load(url).play();
+    display.innerHTML = text;
 }
 
-qButton.addEventListener('click', () => playIt(snare));
+qButton.addEventListener('click', () => playIt(snare, "Snare"));
 
-wButton.addEventListener('click', () => playIt(tom));
+wButton.addEventListener('click', () => playIt(tom, "Tom"));
 
-eButton.addEventListener('click', () => playIt(tink));
+eButton.addEventListener('click', () => playIt(tink, "Tink"));
 
-aButton.addEventListener('click', () => playIt(kick));
+aButton.addEventListener('click', () => playIt(kick, "Kick"));
 
-sButton.addEventListener('click', () => playIt(boom));
+sButton.addEventListener('click', () => playIt(boom, "Boom"));
 
-dButton.addEventListener('click', () => playIt(hihat));
+dButton.addEventListener('click', () => playIt(hihat, "Hi-Hat"));
 
-zButton.addEventListener('click', () => playIt(ride));
+zButton.addEventListener('click', () => playIt(ride, "Ride"));
 
-xButton.addEventListener('click', () => playIt(openhat));
+xButton.addEventListener('click', () => playIt(openhat, "Open Hat"));
 
-cButton.addEventListener('click', () => playIt(clap));
+cButton.addEventListener('click', () => playIt(clap, "Clap"));
