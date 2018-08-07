@@ -1,3 +1,2 @@
-- Event listeners for keyboard button press
 - Refactor display text code to avoid repetition?
 - Make it look nice

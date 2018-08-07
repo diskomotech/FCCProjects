@@ -7,6 +7,8 @@ const dButton = document.querySelector("#D");
 const zButton = document.querySelector("#Z");
 const xButton = document.querySelector("#X");
 const cButton = document.querySelector("#C");
+
+//Will try and refactor into a single variable and object and use key/value pairs
 const snare = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/snare.mp3";
 const tom = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/tom.mp3";
 const tink = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/tink.mp3";
@@ -18,26 +20,52 @@ const openhat = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/dru
 const clap = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3";
 const display = document.querySelector(".display");
 
+//Function to make sounds play
 const playIt = function (url, text) {
     const player = new SoundPlayer();
     player.load(url).play();
     display.innerHTML = text;
 }
 
+//Drum pad button functionality
 qButton.addEventListener('click', () => playIt(snare, "Snare"));
-
 wButton.addEventListener('click', () => playIt(tom, "Tom"));
-
 eButton.addEventListener('click', () => playIt(tink, "Tink"));
-
 aButton.addEventListener('click', () => playIt(kick, "Kick"));
-
 sButton.addEventListener('click', () => playIt(boom, "Boom"));
-
 dButton.addEventListener('click', () => playIt(hihat, "Hi-Hat"));
-
 zButton.addEventListener('click', () => playIt(ride, "Ride"));
-
 xButton.addEventListener('click', () => playIt(openhat, "Open Hat"));
-
 cButton.addEventListener('click', () => playIt(clap, "Clap"));
+
+
+//Key press functionality
+document.addEventListener('keydown', (event) => {
+    if (event.which === 81) {
+        playIt(snare, "Snare");
+    }
+    if (event.which === 87) {
+        playIt(tom, "Tom");
+    }
+    if (event.which === 69) {
+        playIt(tink, "Tink");
+    }
+    if (event.which === 65) {
+        playIt(kick, "Kick");
+    }
+    if (event.which === 83) {
+        playIt(boom, "Boom");
+    }
+    if (event.which === 68) {
+        playIt(hihat, "Hi-Hat");
+    }
+    if (event.which === 90) {
+        playIt(ride, "Ride");
+    }
+    if (event.which === 88) {
+        playIt(openhat, "Open Hat");
+    }
+    if (event.which === 67) {
+        playIt(clap, "Clap");
+    }
+});
