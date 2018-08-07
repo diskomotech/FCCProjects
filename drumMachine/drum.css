@@ -13,7 +13,7 @@ body {
 
 .display {
     height: 40px;
-    width: 220px;
+    width: 200px;
     background-color: white;
     margin: 10px 0;
 }
@@ -23,14 +23,14 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 270px;
-    border: 2px red solid;
+    background-color: black;
   }
 
 .drum-pad {
     width: 70px;
     height: 70px;
     background-color: white;
-    margin: 5px;
+    margin: 7px;
     display: flex;
     justify-content: center;
     align-items: center;

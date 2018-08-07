@@ -1,2 +1,9 @@
 - Refactor display text code to avoid repetition?
 - Make it look nice
+
+- Coloured borders for each key (like MPC Touch)
+- Display to look like MPC 500
+- Border-radius to round the keys slightly
+- Border-radius to round drum unit slightly
+- Animation to show button has been pressed
+- Background colour/image?? (Photo to make it look like a wooden desk?)
