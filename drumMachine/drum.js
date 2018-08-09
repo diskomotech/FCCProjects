@@ -7,6 +7,7 @@ const dButton = document.querySelector("#D");
 const zButton = document.querySelector("#Z");
 const xButton = document.querySelector("#X");
 const cButton = document.querySelector("#C");
+const keys = document.querySelectorAll(".drum-pad");
 
 //Will try and refactor into a single variable and object and use key/value pairs
 const snare = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/snare.mp3";
@@ -19,6 +20,7 @@ const ride = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMa
 const openhat = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/openhat.mp3";
 const clap = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3";
 const display = document.querySelector(".display");
+
 
 //Function to make sounds play
 const playIt = function (url, text) {
@@ -40,32 +42,49 @@ cButton.addEventListener('click', () => playIt(clap, "Clap"));
 
 
 //Key press functionality
-document.addEventListener('keydown', (event) => {
+window.addEventListener('keydown', (event) => {
     if (event.which === 81) {
+        console.log(event);
         playIt(snare, "Snare");
+        qButton.classList.add("triggered");
     }
     if (event.which === 87) {
         playIt(tom, "Tom");
+        wButton.classList.add("triggered");
     }
     if (event.which === 69) {
         playIt(tink, "Tink");
+        eButton.classList.add("triggered");
     }
     if (event.which === 65) {
         playIt(kick, "Kick");
+        aButton.classList.add("triggered");
     }
     if (event.which === 83) {
         playIt(boom, "Boom");
+        sButton.classList.add("triggered");
     }
     if (event.which === 68) {
         playIt(hihat, "Hi-Hat");
+        dButton.classList.add("triggered");
     }
     if (event.which === 90) {
         playIt(ride, "Ride");
+        zButton.classList.add("triggered");
     }
     if (event.which === 88) {
         playIt(openhat, "Open Hat");
+        xButton.classList.add("triggered");
     }
     if (event.which === 67) {
         playIt(clap, "Clap");
+        cButton.classList.add("triggered");
     }
 });
+
+function removeTransition (event) {
+    if (event.propertyName !== "transform") return;
+    this.classList.remove("triggered");
+}
+
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));

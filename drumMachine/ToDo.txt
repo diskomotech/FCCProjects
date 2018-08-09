@@ -1,4 +1,5 @@
 - Refactor display text code to avoid repetition?
 - Make it look nice
 
-- Animation to show button has been pressed
+- Add animations to mouse clicks too
+- Refactor it as much as possible

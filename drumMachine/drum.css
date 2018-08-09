@@ -28,8 +28,7 @@ body {
     width: 200px;
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
-    background-color: #507786;
-    /* background-color: #91B49C; */
+    background-color: #91B49C;
     color: #0e1111;
     margin: 20px 0;
     padding-top: 7px;
@@ -49,7 +48,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    /* border: 1px solid red; */
+    transition: all 0.03s;
 }
 
 .top-row, .mid-row, .bottom-row {
@@ -68,4 +67,9 @@ body {
 .bottom-row .drum-pad {
     border: 2px solid #e6f042;
     margin-bottom: 30px;
+}
+
+.triggered {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #d2d6d0;
 }
