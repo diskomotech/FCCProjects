@@ -8,7 +8,7 @@ body {
     min-width: 100vw;
     justify-content: center;
     align-items: center;
-    background-color:lightskyblue;
+    background-image: url("http://fungyung.com/data/out/125/62844744-wood-wallpapers.png");
 }
 
 .display {
@@ -24,14 +24,14 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 270px;
-    background-color: #131b1b;
+    background-color: rgb(35,43,43);
     border-radius: 6px;
   }
 
 .drum-pad {
     width: 70px;
     height: 70px;
-    background-color: #232b2b;
+    background-color: rgb(53,56,57);
     margin: 7px;
     display: flex;
     justify-content: center;

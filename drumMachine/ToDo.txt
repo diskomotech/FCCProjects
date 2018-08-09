@@ -4,4 +4,3 @@
 - Coloured borders for each key (like MPC Touch)
 - Display to look like MPC 500
 - Animation to show button has been pressed
-- Background colour/image?? (Photo to make it look like a wooden desk?)
