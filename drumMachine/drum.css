@@ -24,18 +24,18 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 270px;
-    background-color: rgb(35,43,43);
+    background-color: #0e1111;
     border-radius: 6px;
   }
 
 .drum-pad {
     width: 70px;
     height: 70px;
-    background-color: rgb(53,56,57);
+    background-color: #0e1111;
     margin: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    /* border: red 1px solid; */
+    border: 1px solid red;
 }
