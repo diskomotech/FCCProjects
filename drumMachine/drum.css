@@ -11,31 +11,51 @@ body {
     background-image: url("http://fungyung.com/data/out/125/62844744-wood-wallpapers.png");
 }
 
-.display {
-    height: 40px;
-    width: 200px;
-    background-color: white;
-    margin: 10px 0;
-    border-radius: 2px;
-}
-
 .grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 270px;
+    width: 310px;
+    height: 350px;
     background-color: #0e1111;
     border-radius: 6px;
   }
+
+.display {
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 2px;
+}
 
 .drum-pad {
     width: 70px;
     height: 70px;
     background-color: #0e1111;
+    color: #d2d6d0;
     margin: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
-    border: 1px solid red;
+    border-radius: 4px;
+    /* border: 1px solid red; */
+}
+
+.top-row, .mid-row, .bottom-row {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.top-row .drum-pad {
+    border: 2px solid #9900ff;
+}
+
+.mid-row .drum-pad {
+    border: 2px solid #0099ff;
+}
+
+.bottom-row .drum-pad {
+    border: 2px solid #e6f042;
+    margin-bottom: 30px;
 }
