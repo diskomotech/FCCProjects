@@ -1,6 +1,4 @@
 - Refactor display text code to avoid repetition?
 - Make it look nice
 
-- Coloured borders for each key (like MPC Touch)
-- Display to look like MPC 500
 - Animation to show button has been pressed
