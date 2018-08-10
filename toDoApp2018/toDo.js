@@ -29,6 +29,6 @@ textInput.addEventListener("keypress", (event) => {
 
 ul.addEventListener("click", (event) => {
     if (event.target.tagName == "SPAN") {
-        console.log("Working");
+        event.target.parentNode.remove();
     }
 });

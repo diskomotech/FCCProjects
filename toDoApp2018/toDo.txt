@@ -1,5 +1,5 @@
-- Deleting items (use event object and stopPropagation to stop event bubbling)
 - Styling
-- Animations
+- Delete icon
+- Animations (especially fade out for deletion of items)
 - Toggle the form visibility
 - Responsive?
