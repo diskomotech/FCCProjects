@@ -1,5 +1,6 @@
 body {
     font-family: Helvetica, sans-serif;
+    
 }
 
 .container {
@@ -9,13 +10,19 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(7, 175, 175);
+    color: #520556;
+    background-color: #8b104e;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ff9900;
+    min-width: 250px;
+    min-height: 270px;
+    padding-top: 15px;
+    font-size: 1.2em;
 }
 
 ul {
@@ -24,14 +31,24 @@ ul {
 
 li {
     list-style-type: none;
+    padding: 0 15px;
 }
 
 #textInput {
+    outline: none;
+    border: none;
     margin-bottom: 10px;
+    background-color: #ca431d;
+    color: #520556;
+    width: 180px;
+    height: 30px;
+}
+
+#textInput:focus {
+    border: 1px solid #520556;
 }
 
 .completed {
-    color: darkred;
+    color: #8b104e;
     text-decoration: line-through;
 }
-
