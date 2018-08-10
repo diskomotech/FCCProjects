@@ -23,6 +23,7 @@ body {
     min-height: 270px;
     padding-top: 15px;
     font-size: 1.2em;
+    border-radius: 3px;
 }
 
 ul {
@@ -42,6 +43,7 @@ li {
     color: #520556;
     width: 180px;
     height: 30px;
+    border-radius: 1px;
 }
 
 #textInput:focus {
