@@ -1,4 +1,3 @@
-- Styling
 - Delete icon
 - Animations (especially fade out for deletion of items)
 - Toggle the form visibility
