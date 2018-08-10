@@ -21,7 +21,6 @@ const openhat = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/dru
 const clap = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/clap.mp3";
 const display = document.querySelector(".display");
 
-
 //Function to make sounds play
 const playIt = function (url, text) {
     const player = new SoundPlayer();
@@ -30,21 +29,47 @@ const playIt = function (url, text) {
 }
 
 //Drum pad button functionality
-qButton.addEventListener('click', () => playIt(snare, "Snare"));
-wButton.addEventListener('click', () => playIt(tom, "Tom"));
-eButton.addEventListener('click', () => playIt(tink, "Tink"));
-aButton.addEventListener('click', () => playIt(kick, "Kick"));
-sButton.addEventListener('click', () => playIt(boom, "Boom"));
-dButton.addEventListener('click', () => playIt(hihat, "Hi-Hat"));
-zButton.addEventListener('click', () => playIt(ride, "Ride"));
-xButton.addEventListener('click', () => playIt(openhat, "Open Hat"));
-cButton.addEventListener('click', () => playIt(clap, "Clap"));
+qButton.addEventListener('click', () => {
+    playIt(snare, "Snare");
+    qButton.classList.add("triggered");
+});
+wButton.addEventListener('click', () => {
+    playIt(tom, "Tom");
+    wButton.classList.add("triggered");
+});
+eButton.addEventListener('click', () => {
+    playIt(tink, "Tink");
+    eButton.classList.add("triggered");
+});
+aButton.addEventListener('click', () => {
+    playIt(kick, "Kick");
+    aButton.classList.add("triggered");
+});
+sButton.addEventListener('click', () => {
+    playIt(boom, "Boom");
+    sButton.classList.add("triggered");
+});
+dButton.addEventListener('click', () => {
+    playIt(hihat, "Hi-Hat");
+    dButton.classList.add("triggered");    
+});
+zButton.addEventListener('click', () => {
+    playIt(ride, "Ride");
+    zButton.classList.add("triggered");
+});
+xButton.addEventListener('click', () => {
+    playIt(openhat, "Open Hat");
+    xButton.classList.add("triggered");
+});
+cButton.addEventListener('click', () => {
+    playIt(clap, "Clap");
+    cButton.classList.add("triggered");
+});
 
 
 //Key press functionality
 window.addEventListener('keydown', (event) => {
     if (event.which === 81) {
-        console.log(event);
         playIt(snare, "Snare");
         qButton.classList.add("triggered");
     }
@@ -82,6 +107,7 @@ window.addEventListener('keydown', (event) => {
     }
 });
 
+//Remove button press effect once transition ended
 function removeTransition (event) {
     if (event.propertyName !== "transform") return;
     this.classList.remove("triggered");
