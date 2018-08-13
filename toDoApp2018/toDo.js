@@ -17,7 +17,7 @@ textInput.addEventListener("keypress", (event) => {
        let newToDoItem = textInput.value;
 
        //Add (temporary) X delete button to span
-       newSpan.innerHTML = '<i class="fa fa-trash"></i> ';
+       newSpan.innerHTML = '<i class="fa fa-trash"></i>';
 
        //Append the LI to UL and add text input
        ul.appendChild(li).append(newSpan, newToDoItem);
