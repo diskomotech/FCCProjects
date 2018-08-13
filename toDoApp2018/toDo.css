@@ -20,7 +20,7 @@ body {
     align-items: center;
     background-color: #ff9900;
     min-width: 265px;
-    min-height: 275px;
+    min-height: 200px;
     padding-top: 15px;
     font-size: 1.2em;
     border-radius: 3px;
@@ -37,7 +37,7 @@ li {
 }
 
 span {
-    padding-right: 50px;
+    padding-right: 52px;
 }
 
 #textInput {
