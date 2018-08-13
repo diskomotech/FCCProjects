@@ -28,7 +28,7 @@ textInput.addEventListener("keypress", (event) => {
 });
 
 ul.addEventListener("click", (event) => {
-    if (event.target.tagName == "SPAN") {
-        event.target.parentNode.remove();
+    if (event.target.tagName == "I") {
+        event.target.parentNode.parentNode.remove();
     }
 });
