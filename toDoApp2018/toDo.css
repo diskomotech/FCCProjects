@@ -38,6 +38,12 @@ li {
 
 span {
     padding-right: 52px;
+    transition: opacity 0.4s;
+    opacity: 0;
+}
+
+span:hover {
+    opacity: 1;
 }
 
 #textInput {
