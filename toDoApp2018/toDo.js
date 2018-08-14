@@ -1,11 +1,13 @@
 const ul = document.querySelector("ul");
 
+//Mark item as completed
 ul.addEventListener("click", (event) => {
     if (event.target.tagName == "LI") {
         event.target.classList.toggle("completed");
     }
 });
 
+//Create new to-do list items
 textInput.addEventListener("keypress", (event) => {
     if (event.which === 13) {
         //Create new DOM elements to be added to UL
@@ -27,6 +29,7 @@ textInput.addEventListener("keypress", (event) => {
     }
 });
 
+//Delete list item when trashcan icon clicked
 ul.addEventListener("click", (event) => {
     if (event.target.tagName == "I") {
         event.target.parentNode.parentNode.remove();

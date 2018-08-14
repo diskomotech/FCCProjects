@@ -38,7 +38,7 @@ li {
 
 span {
     padding-right: 52px;
-    transition: opacity 0.4s;
+    transition: opacity 0.1s;
     opacity: 0;
 }
 
