@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FCC Survey Form</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="survey.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Let us know how we can improve freeCodeCamp</p>
+
+    <form action="#" id="survey-form" method="POST">
+      <div class="content">
+        <div class="list-items">
+          <label for="name">* Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" autofocus>
+        </div>
+
+        <div class="list-items">
+          <label for="email">* Email:</label>
+          <input type="email" id="email" placeholder="Enter your email">
+        </div>
+
+        <div class="list-items">
+          <label for="number">* Age:</label>
+          <input type="number" id="number" placeholder="Age">
+        </div>
+
+        <div class="list-items">
+          <label for="dropdown">Which option best describes your current role:</label>
+          <select id="dropdown">
+            <option disabled value>Select an option</option>
+            <option>Student</option>
+            <option>Full Time Job</option>
+            <option>Full Time Learner</option>
+            <option>Prefer Not To Say</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="list-items">
+          <label for="recommend">* How likely is it that you would recommend freeCodeCamp to a friend?</label>
+          <ul style="list-style: none;">
+            <li><label>Definitely <input type="radio" name="recommend"></label></li>
+            <li><label>Maybe <input type="radio" name="recommend"></label></li>
+            <li><label>Not sure <input type="radio" name="recommend"></label></li>
+          </ul>
+        </div>
+
+        <div class="list-items">
+          <label for="dropdown">What do you like most in FCC:</label>
+          <select id="dropdown">
+            <option disabled value>Select an option</option>
+            <option>Challenges</option>
+            <option>Projects</option>
+            <option>Community</option>
+            <option>Open Source</option>
+          </select>
+        </div>
+
+        <div class="list-items">
+          <label for="improve">Things that should be improved in the future <br> (Check all that apply):</label>
+          <ul style="list-style: none;">
+            <li><label>Front-End Projects <input type="checkbox" name="improve" value="front-end"></label></li>
+            <li><label>Back-End Projects <input type="checkbox" name="improve" value="back-end"></label></li>
+            <li><label>Challenges <input type="checkbox" name="improve" value="challenges"></label></li>
+            <li><label>Open Source Community <input type="checkbox" name="improve" value="open-source"></label></li>
+            <li><label>Gitter help rooms <input type="checkbox" name="improve" value="gitter-help"></label></li>
+            <li><label>Videos <input type="checkbox" name="improve" value="videos"></label></li>
+            <li><label>City Meetups <input type="checkbox" name="improve" value="city-meetups"></label></li>
+            <li><label>Wiki <input type="checkbox" name="improve" value="wiki"></label></li>
+            <li><label>Forum <input type="checkbox" name="improve" value="forum"></label></li>
+            <li><label>Additional Courses <input type="checkbox" name="improve" value="add-courses"></label></li>
+          </ul>
+        </div>
+
+        <div class="list-items">
+          <label for="comments">Any comments or Suggestions?</label>
+          <textarea name="comments" id="comments" placeholder="Enter your comment here" cols="50" rows="5"></textarea>
+        </div>
+
+        <div class="list-items">
+          <input type="submit">
+        </div>
+    </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
