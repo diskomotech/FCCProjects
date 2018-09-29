@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 31rem;
+    height: 35rem;
+    background-color: #0e1111;
+    border-radius: 0.6rem;
+  }
