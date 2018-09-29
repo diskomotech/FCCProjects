@@ -1,4 +1,4 @@
-.container {
+#container {
     display: flex;
     min-height: 100vh;
     min-width: 100vw;
@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.grid {
+#grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
