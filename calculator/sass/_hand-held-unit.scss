@@ -10,8 +10,26 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 31rem;
-    height: 35rem;
+    width: 40rem;
+    height: 42rem;
     background-color: #0e1111;
     border-radius: 0.6rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: flex-start;
+    height: 15%;
+}
+
+  #button {
+      font-size: 1.5rem;
+      border: 0.1rem solid white;
+      width: 70px;
+        background-color: #0e1111;
+        color: #d2d6d0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
   }
