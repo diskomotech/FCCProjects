@@ -1,11 +1,15 @@
 {
   "name": "calculator",
   "version": "1.0.0",
-  "description": "",
+  "description": "FreeCodeCamp JavaScript Calculator app",
   "main": "calculator.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/main.scss calculator.css -w"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Jim Wright",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
 }
