@@ -16,3 +16,18 @@ const seven = document.querySelector("#seven");
 const eight = document.querySelector("#eight");
 const nine = document.querySelector("#nine");
 const display = document.querySelector("#display");
+let input = "";
+
+two.addEventListener("click", () => {
+    input = input + "2 ";
+    console.log(input);
+});
+
+add.addEventListener("click", () => {
+    input = input + "+ ";
+    console.log(input);
+});
+
+equals.addEventListener("click", () => {
+    console.log(eval(input));
+});
