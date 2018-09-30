@@ -1,5 +1,3 @@
-import "math-from-string/dist/math-from-string.min";
-
 const clear = document.querySelector("#clear");
 const divide = document.querySelector("#divide");
 const multiply = document.querySelector("#multiply");
@@ -22,61 +20,61 @@ let input = "";
 let output;
 
 one.addEventListener("click", () => {
-    input = input + "1 ";
+    input = input + "1";
     console.log(input);
 });
 
 two.addEventListener("click", () => {
-    input = input + "2 ";
+    input = input + "2";
     console.log(input);
 });
 
 three.addEventListener("click", () => {
-    input = input + "3 ";
+    input = input + "3";
     console.log(input);
 });
 
 four.addEventListener("click", () => {
-    input = input + "4 ";
+    input = input + "4";
     console.log(input);
 });
 
 five.addEventListener("click", () => {
-    input = input + "5 ";
+    input = input + "5";
     console.log(input);
 });
 
 six.addEventListener("click", () => {
-    input = input + "6 ";
+    input = input + "6";
     console.log(input);
 });
 
 seven.addEventListener("click", () => {
-    input = input + "7 ";
+    input = input + "7";
     console.log(input);
 });
 
 eight.addEventListener("click", () => {
-    input = input + "8 ";
+    input = input + "8";
     console.log(input);
 });
 
 nine.addEventListener("click", () => {
-    input = input + "9 ";
+    input = input + "9";
     console.log(input);
 });
 
 zero.addEventListener("click", () => {
-    input = input + "0 ";
+    input = input + "0";
     console.log(input);
 });
 
 add.addEventListener("click", () => {
-    input = input + "+ ";
+    input = input + "+";
     console.log(input);
 });
 
 equals.addEventListener("click", () => {
-    output = (mathfromString(input));
+    output = (mathFromString(input));
     console.log(output);
 });
