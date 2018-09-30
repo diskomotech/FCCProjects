@@ -16,6 +16,14 @@ body {
   font-weight: 400;
   padding: 3rem; }
 
+#display {
+  font-size: 3rem;
+  text-align: right;
+  padding: 1rem 0.5rem 0 0; }
+
+#button {
+  font-size: 1.5rem; }
+
 #container {
   display: flex;
   min-height: 100vh;
@@ -44,7 +52,6 @@ body {
   height: 15%; }
 
 #button {
-  font-size: 1.5rem;
   border: 0.1rem solid white;
   width: 7rem;
   color: #d2d6d0;
