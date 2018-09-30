@@ -20,7 +20,7 @@ body {
   font-size: 3rem;
   text-align: right; }
 
-#button {
+.button {
   font-size: 1.5rem; }
 
 #container {
@@ -37,7 +37,8 @@ body {
   width: 35rem;
   height: 42rem;
   background-color: #0e1111;
-  border-radius: 0.6rem; }
+  border-radius: 0.6rem;
+  padding: 1rem 0; }
 
 #display {
   height: 5rem;
@@ -51,9 +52,9 @@ body {
   justify-content: flex-start;
   height: 15%; }
 
-#button {
+.button {
   border: 0.1rem solid white;
-  width: 7rem;
+  min-width: 7rem;
   color: #d2d6d0;
   display: flex;
   justify-content: center;
@@ -61,5 +62,11 @@ body {
   border-radius: 0.4rem;
   margin: 0 0.25rem; }
 
-#clear {
-  flex-grow: 2; }
+#clear, #zero {
+  width: 14rem; }
+
+#equals {
+  height: 12.6rem; }
+
+#dummy {
+  opacity: 0; }
