@@ -12,7 +12,7 @@
     justify-content: center;
     width: 35rem;
     height: 42rem;
-    background-color: #0e1111;
+    background-color: $almost-black;
     border-radius: 0.6rem;
   }
 
@@ -21,6 +21,7 @@
       width: 80%;
       background-color: green;
       margin-top: 1rem;
+      padding: 0.5rem 0.5rem 0 0;
   }
 
   .row {
@@ -32,7 +33,7 @@
   #button {
       border: 0.1rem solid white;
       width: 7rem;
-      color: #d2d6d0;
+      color: $off-white;
       display: flex;
       justify-content: center;
       align-items: center;
