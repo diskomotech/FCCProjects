@@ -1,0 +1,38 @@
+What do the buttons do?
+
+Clear just resets everything back to zero.
+
+Numbers and decimal are simple inputs. We just want to save these somewhere
+and wait for an operator.
+
+Operators (/ X + -) maybe aren't anything special here - just like Numbers
+
+Equals is the magic button. This means that we're finished with
+input and want the output. It can only be pressed once.
+
+So maybe we want to keep saving/logging inputs as long as possible and only
+stop when the AC or equals button is pressed?
+
+
+BIG STUFF
+- Display inputs as pressed.
+- Save input sequence as we go along in variable
+- Transform input into output as soon as equals is pressed
+- Reset everything when AC pressed
+
+
+DETAILS
+- When inputting numbers, my calculator should not allow a 
+number to begin with multiple zeros.
+- Use formula logic for calculation (look this up)
+- When the decimal element is clicked, a . should append to 
+the currently displayed value; two . in one number should not be accepted.
+- I should be able to perform any operation (+, -, *, /) on 
+numbers containing decimal points.
+- If 2 or more operators are entered consecutively, the operation 
+performed should be the last operator entered.
+- Pressing an operator immediately following = should start a new 
+calculation that operates on the result of the previous evaluation.
+- My calculator should have several decimal places of precision 
+when it comes to rounding (note that there is no exact standard, 
+but you should be able to handle calculations like 2 / 7 with reasonable precision to at least 4 decimal places).
