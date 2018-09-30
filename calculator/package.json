@@ -8,7 +8,9 @@
   },
   "author": "Jim Wright",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "math-from-string": "^2.0.0"
+  },
   "devDependencies": {
     "node-sass": "^4.9.3"
   }

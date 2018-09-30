@@ -1,4 +1,4 @@
-"use strict"
+import "math-from-string/dist/math-from-string.min";
 
 const clear = document.querySelector("#clear");
 const divide = document.querySelector("#divide");
@@ -77,6 +77,6 @@ add.addEventListener("click", () => {
 });
 
 equals.addEventListener("click", () => {
-    output = (eval(input));
+    output = (mathfromString(input));
     console.log(output);
 });
