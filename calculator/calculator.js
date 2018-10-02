@@ -97,8 +97,7 @@ divide.addEventListener("click", () => {
 });
 
 decimal.addEventListener("click", () => {
-    let decimalSearch = input.split("");
-    let last = decimalSearch.pop();
+    let last = input.split("").pop();
     let decimalRegex = /[.]/g;
     let operatorRegex = /[+-/*]/g;
     
@@ -115,30 +114,30 @@ decimal.addEventListener("click", () => {
     // Else if (operator is there) {
         //Do we already have a decimal to the right of the operator? Yes? Then, prevent another being entered. No? Allow decimal to be entered.
    // }
+
+    //This doesn't work. Struggling to make it work right now. Parking the issue for the time being.
+     //   if (input.match(operatorRegex) !== null) {
+    //I want to break input and just look at the right hand side of the operator
+    // let splitInput = input.split("+");   
+    // let x = input.indexOf(operatorRegex);
+    //     let rightHandSearch = decimalSearch.slice(x);
+    //     console.log(x);
+    // }
+
+    //This largely works but only solves half of the problem. 
     if (input.match(operatorRegex) === null) {
         if (input.match(decimalRegex) !== null) {
             return;
         }
-        else if (input.match(decimalRegex) === null) {
+        else {
             input = input + ".";
             displayStuff();
         }
-    };
-
-
-    // if (input.match(operatorRegex) === null && input.match(decimalRegex) === null) {
-    //     // if (input.match(decimalRegex) === null) {
-    //         input = input + ".";
-    //         displayStuff();
-    //     // }
-    //     // else {
-    //     //     input = input;
-    //     // }
-    // }
-    // else if (input.match(operatorRegex) !== null) {
-    //     input = input + ".";
-    //     displayStuff();
-    // }
+    }
+    else {
+        input = input + ".";
+        displayStuff();
+    }
 });
 
 equals.addEventListener("click", () => {
