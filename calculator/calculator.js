@@ -97,26 +97,48 @@ divide.addEventListener("click", () => {
 });
 
 decimal.addEventListener("click", () => {
-    let last = input.split("").pop();
+    let decimalSearch = input.split("");
+    let last = decimalSearch.pop();
     let decimalRegex = /[.]/g;
-    let operatorRegex = /[+-/*]/g; 
+    let operatorRegex = /[+-/*]/g;
     
+    //If last digit entered was a decimal, stop user entering another decimal straight away
     if (last === ".") {
         return;
     }
-    if (input.match(operatorRegex) === null && input.match(decimalRegex) === null) {
-        // if (input.match(decimalRegex) === null) {
+
+    //Stop user from entering more than decimal on any side of an operator
+    //To do this, search input array for an operator
+    //If (operator is not there) {
+        //Do we already have a decimal? Yes? Then, prevent another being entered. No? Allow decimal to be entered.
+    // }
+    // Else if (operator is there) {
+        //Do we already have a decimal to the right of the operator? Yes? Then, prevent another being entered. No? Allow decimal to be entered.
+   // }
+    if (input.match(operatorRegex) === null) {
+        if (input.match(decimalRegex) !== null) {
+            return;
+        }
+        else if (input.match(decimalRegex) === null) {
             input = input + ".";
             displayStuff();
-        // }
-        // else {
-        //     input = input;
-        // }
-    }
-    else if (input.match(operatorRegex) !== null) {
-        input = input + ".";
-        displayStuff();
-    }
+        }
+    };
+
+
+    // if (input.match(operatorRegex) === null && input.match(decimalRegex) === null) {
+    //     // if (input.match(decimalRegex) === null) {
+    //         input = input + ".";
+    //         displayStuff();
+    //     // }
+    //     // else {
+    //     //     input = input;
+    //     // }
+    // }
+    // else if (input.match(operatorRegex) !== null) {
+    //     input = input + ".";
+    //     displayStuff();
+    // }
 });
 
 equals.addEventListener("click", () => {
