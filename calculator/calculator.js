@@ -89,8 +89,18 @@ divide.addEventListener("click", () => {
     console.log(input);
 });
 
+decimal.addEventListener("click", () => {
+    input = input + ".";
+    console.log(input);
+});
+
 equals.addEventListener("click", () => {
     output = (mathFromString(input));
     console.log(output);
     input = output;
+});
+
+clear.addEventListener("click", () => {
+    input = "";
+    output = "";
 });
