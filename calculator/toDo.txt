@@ -1,11 +1,9 @@
 BIG STUFF
 - Something to disallow many zeroes in a row unless it's after a decimal point.
-- Something to disallow more than one decimal in a given number.
+- Something to disallow more than one decimal in a given number. [Halfway there but still '1.2.4']
 - Rework some of the addEventListener stuff into functions so repeating less code.
 
 DETAILS
-- When inputting numbers, my calculator should not allow a 
-number to begin with multiple zeros.
 - Use formula logic for calculation (look this up)
 - Two decimal points in one number should not be accepted.
 - If 2 or more operators are entered consecutively, the operation 

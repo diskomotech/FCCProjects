@@ -98,7 +98,14 @@ divide.addEventListener("click", () => {
 
 decimal.addEventListener("click", () => {
     let last = input.split("").pop();
+    let decimalRegex = /[.]/g;
+    let operatorRegex = /[+-/*]/g; //Need to search for divide operator too
+    
     if (last !== ".") {
+        input = input + ".";
+        displayStuff();
+    }
+    if (input.match(decimalRegex) === null && input.match(operatorRegex) === null) {
         input = input + ".";
         displayStuff();
     }
