@@ -74,7 +74,23 @@ add.addEventListener("click", () => {
     console.log(input);
 });
 
+subtract.addEventListener("click", () => {
+    input = input + "-";
+    console.log(input);
+});
+
+multiply.addEventListener("click", () => {
+    input = input + "*";
+    console.log(input);
+});
+
+divide.addEventListener("click", () => {
+    input = input + "/";
+    console.log(input);
+});
+
 equals.addEventListener("click", () => {
     output = (mathFromString(input));
     console.log(output);
+    input = output;
 });

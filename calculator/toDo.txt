@@ -16,7 +16,6 @@ stop when the AC or equals button is pressed?
 
 BIG STUFF
 - Display inputs as pressed.
-- Save input sequence as we go along in variable
 - Transform input into output as soon as equals is pressed
 - Reset everything when AC pressed
 
