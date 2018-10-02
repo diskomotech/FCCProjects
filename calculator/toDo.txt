@@ -1,14 +1,13 @@
 BIG STUFF
-- Display inputs as pressed.
+- Something to disallow many zeroes or decimals in a row.
+- Somethign to disallow more than one decimal in a given number.
+- Rework some of the addEventListener stuff into functions so repeating less code.
 
 DETAILS
 - When inputting numbers, my calculator should not allow a 
 number to begin with multiple zeros.
 - Use formula logic for calculation (look this up)
-- When the decimal element is clicked, a . should append to 
-the currently displayed value; two . in one number should not be accepted.
-- I should be able to perform any operation (+, -, *, /) on 
-numbers containing decimal points.
+- Two decimal points in one number should not be accepted.
 - If 2 or more operators are entered consecutively, the operation 
 performed should be the last operator entered.
 - My calculator should have several decimal places of precision 

@@ -19,88 +19,93 @@ const display = document.querySelector("#display");
 let input = "";
 let output;
 
+function displayStuff () {
+    display.innerHTML = input;
+}
+
 one.addEventListener("click", () => {
     input = input + "1";
-    console.log(input);
+    displayStuff();
 });
 
 two.addEventListener("click", () => {
     input = input + "2";
-    console.log(input);
+    displayStuff();
 });
 
 three.addEventListener("click", () => {
     input = input + "3";
-    console.log(input);
+    displayStuff();
 });
 
 four.addEventListener("click", () => {
     input = input + "4";
-    console.log(input);
+    displayStuff();
 });
 
 five.addEventListener("click", () => {
     input = input + "5";
-    console.log(input);
+    displayStuff();
 });
 
 six.addEventListener("click", () => {
     input = input + "6";
-    console.log(input);
+    displayStuff();
 });
 
 seven.addEventListener("click", () => {
     input = input + "7";
-    console.log(input);
+    displayStuff();
 });
 
 eight.addEventListener("click", () => {
     input = input + "8";
-    console.log(input);
+    displayStuff();
 });
 
 nine.addEventListener("click", () => {
     input = input + "9";
-    console.log(input);
+    displayStuff();
 });
 
 zero.addEventListener("click", () => {
     input = input + "0";
-    console.log(input);
+    displayStuff();
 });
 
 add.addEventListener("click", () => {
     input = input + "+";
-    console.log(input);
+    displayStuff();
 });
 
 subtract.addEventListener("click", () => {
     input = input + "-";
-    console.log(input);
+    displayStuff();
 });
 
 multiply.addEventListener("click", () => {
     input = input + "*";
-    console.log(input);
+    displayStuff();
 });
 
 divide.addEventListener("click", () => {
     input = input + "/";
-    console.log(input);
+    displayStuff();
 });
 
 decimal.addEventListener("click", () => {
     input = input + ".";
-    console.log(input);
+    displayStuff();
 });
 
 equals.addEventListener("click", () => {
     output = (mathFromString(input));
-    console.log(output);
     input = output;
+    displayStuff();
 });
 
 clear.addEventListener("click", () => {
     input = "";
     output = "";
+    display.innerHTML = 0;
 });
