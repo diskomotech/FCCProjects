@@ -69,8 +69,11 @@ nine.addEventListener("click", () => {
 });
 
 zero.addEventListener("click", () => {
-    input = input + "0";
-    displayStuff();
+    let last = input.split("").pop();
+    if (last !== "0") {
+        input = input + "0";
+        displayStuff();
+    }
 });
 
 add.addEventListener("click", () => {
@@ -94,8 +97,11 @@ divide.addEventListener("click", () => {
 });
 
 decimal.addEventListener("click", () => {
-    input = input + ".";
-    displayStuff();
+    let last = input.split("").pop();
+    if (last !== ".") {
+        input = input + ".";
+        displayStuff();
+    }
 });
 
 equals.addEventListener("click", () => {

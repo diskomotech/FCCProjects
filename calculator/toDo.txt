@@ -1,6 +1,6 @@
 BIG STUFF
-- Something to disallow many zeroes or decimals in a row.
-- Somethign to disallow more than one decimal in a given number.
+- Something to disallow many zeroes in a row unless it's after a decimal point.
+- Something to disallow more than one decimal in a given number.
 - Rework some of the addEventListener stuff into functions so repeating less code.
 
 DETAILS
