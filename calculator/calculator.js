@@ -99,13 +99,21 @@ divide.addEventListener("click", () => {
 decimal.addEventListener("click", () => {
     let last = input.split("").pop();
     let decimalRegex = /[.]/g;
-    let operatorRegex = /[+-/*]/g; //Need to search for divide operator too
+    let operatorRegex = /[+-/*]/g; 
     
-    if (last !== ".") {
-        input = input + ".";
-        displayStuff();
+    if (last === ".") {
+        return;
     }
-    if (input.match(decimalRegex) === null && input.match(operatorRegex) === null) {
+    if (input.match(operatorRegex) === null && input.match(decimalRegex) === null) {
+        // if (input.match(decimalRegex) === null) {
+            input = input + ".";
+            displayStuff();
+        // }
+        // else {
+        //     input = input;
+        // }
+    }
+    else if (input.match(operatorRegex) !== null) {
         input = input + ".";
         displayStuff();
     }
