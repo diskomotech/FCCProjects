@@ -71,6 +71,7 @@ nine.addEventListener("click", () => {
 });
 
 zero.addEventListener("click", () => {
+    //This needs fixing. Currently can't enter '100'
     let last = input.split("").pop();
     if (last !== "0" || input.match(decimalRegex) !== null) {
         input = input + "0";
@@ -89,16 +90,25 @@ add.addEventListener("click", () => {
 });
 
 subtract.addEventListener("click", () => {
+    if (input[input.length-1].match(operatorRegex) !== null) {  
+        input = input.split(operatorRegex).join("");
+    }
     input = input + "-";
     displayStuff();
 });
 
 multiply.addEventListener("click", () => {
+    if (input[input.length-1].match(operatorRegex) !== null) {  
+        input = input.split(operatorRegex).join("");
+    }
     input = input + "*";
     displayStuff();
 });
 
 divide.addEventListener("click", () => {
+    if (input[input.length-1].match(operatorRegex) !== null) {  
+        input = input.split(operatorRegex).join("");
+    }
     input = input + "/";
     displayStuff();
 });
