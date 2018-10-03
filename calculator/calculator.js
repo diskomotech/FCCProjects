@@ -79,14 +79,10 @@ zero.addEventListener("click", () => {
 });
 
 add.addEventListener("click", () => {
-    let last = input.split("").pop();
     //If (last input item is an operator then remove it)
+    //Can this be wrapped in a function?
     if (input[input.length-1].match(operatorRegex) !== null) {  
-        //For some reason, this code is popping not the last operator but the entry before that. Why?
-        input = input.split("");
-        input = input.pop();
-        console.log(input);
-        // .join("");
+        input = input.split(operatorRegex).join("");
     }
     input = input + "+";
     displayStuff();
