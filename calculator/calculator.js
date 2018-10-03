@@ -17,6 +17,7 @@ const eight = document.querySelector("#eight");
 const nine = document.querySelector("#nine");
 const display = document.querySelector("#display");
 const decimalRegex = /[.]/g;
+const operatorRegex = /[+-/*]/g;
 let input = "";
 let output;
 
@@ -78,6 +79,15 @@ zero.addEventListener("click", () => {
 });
 
 add.addEventListener("click", () => {
+    let last = input.split("").pop();
+    //If (last input item is an operator then remove it)
+    if (input[input.length-1].match(operatorRegex) !== null) {  
+        //For some reason, this code is popping not the last operator but the entry before that. Why?
+        input = input.split("");
+        input = input.pop();
+        console.log(input);
+        // .join("");
+    }
     input = input + "+";
     displayStuff();
 });
@@ -99,7 +109,6 @@ divide.addEventListener("click", () => {
 
 decimal.addEventListener("click", () => {
     let last = input.split("").pop();
-    let operatorRegex = /[+-/*]/g;
     
     //If last digit entered was a decimal, stop user entering another decimal straight away
     if (last === ".") {
