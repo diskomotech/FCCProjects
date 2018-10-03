@@ -25,6 +25,10 @@ function displayStuff () {
     display.innerHTML = input;
 }
 
+function roundAnswer(x) {
+    return Number.parseFloat(x).toFixed(7);
+  }
+
 one.addEventListener("click", () => {
     input = input + "1";
     displayStuff();
@@ -156,7 +160,7 @@ decimal.addEventListener("click", () => {
 });
 
 equals.addEventListener("click", () => {
-    output = (mathFromString(input));
+    output = roundAnswer(mathFromString(input));
     input = output;
     displayStuff();
 });

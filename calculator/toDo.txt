@@ -1,5 +1,4 @@
 BIG STUFF
-- Round output/display to 5 decimal places
 - If 2 or more operators are entered consecutively, the operation performed should be the last operator entered. [Half solved
 currently removing any decimal places entered which we don't want. Think something unexpected happening with join method]
 - Something to disallow many zeroes in a row unless it's after a decimal point. [Half solved]
