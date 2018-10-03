@@ -16,6 +16,7 @@ const seven = document.querySelector("#seven");
 const eight = document.querySelector("#eight");
 const nine = document.querySelector("#nine");
 const display = document.querySelector("#display");
+const decimalRegex = /[.]/g;
 let input = "";
 let output;
 
@@ -70,7 +71,7 @@ nine.addEventListener("click", () => {
 
 zero.addEventListener("click", () => {
     let last = input.split("").pop();
-    if (last !== "0") {
+    if (last !== "0" || input.match(decimalRegex) !== null) {
         input = input + "0";
         displayStuff();
     }
@@ -98,7 +99,6 @@ divide.addEventListener("click", () => {
 
 decimal.addEventListener("click", () => {
     let last = input.split("").pop();
-    let decimalRegex = /[.]/g;
     let operatorRegex = /[+-/*]/g;
     
     //If last digit entered was a decimal, stop user entering another decimal straight away

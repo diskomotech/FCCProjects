@@ -1,13 +1,14 @@
 BIG STUFF
-- Something to disallow many zeroes in a row unless it's after a decimal point.
+- Round output/display to 5 decimal places
+- If 2 or more operators are entered consecutively, the operation performed should be the last operator entered.
+- Something to disallow many zeroes in a row unless it's after a decimal point. [Half solved]
 - Something to disallow more than one decimal in a given number. [Halfway there but still '1.2.4']
+- Maybe think about how to save each single number in a var each time an operator is pressed? This might help solve the
+decimal and zero validation problems. Another alternative would be to work on building component decimal and zero validation
+functions and deploy those.
 - Rework some of the addEventListener stuff into functions so repeating less code.
 
 DETAILS
 - Use formula logic for calculation (look this up)
-- Two decimal points in one number should not be accepted.
-- If 2 or more operators are entered consecutively, the operation 
-performed should be the last operator entered.
-- My calculator should have several decimal places of precision 
-when it comes to rounding (note that there is no exact standard, 
+- My calculator should have several decimal places of precision when it comes to rounding (note that there is no exact standard, 
 but you should be able to handle calculations like 2 / 7 with reasonable precision to at least 4 decimal places).
