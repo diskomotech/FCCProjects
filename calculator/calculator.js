@@ -26,11 +26,13 @@ function displayStuff () {
 }
 
 function roundAnswer(x) {
-    return Number.parseFloat(x).toFixed(7);
+    if (x % 1 != 0) {
+        return Number.parseFloat(x).toFixed(5);
+    }
+    else {
+        return x;
+    }
   }
-
-//If 2 or more operators are entered consecutively, the operation performed should be the last operator entered. [Half solved
-//currently removing any decimal places entered which we don't want]
 
 function consecutiveOperators(inputted, operator) {
     if (inputted.slice(-2).match(operatorRegex) !== null) {  
@@ -158,13 +160,11 @@ decimal.addEventListener("click", () => {
 });
 
 equals.addEventListener("click", () => {
-    output = roundAnswer(mathFromString(input));
-    input = output;
+    input = roundAnswer(mathFromString(input));
     displayStuff();
 });
 
 clear.addEventListener("click", () => {
     input = "";
-    output = "";
     display.innerHTML = 0;
 });
