@@ -96,12 +96,7 @@ zero.addEventListener("click", () => {
 });
 
 add.addEventListener("click", () => {
-    //If (last input item is an operator then remove it)
-    //Can this be wrapped in a function?
-    if (input[input.length-1].match(operatorRegex) !== null) {  
-        input = input.split(operatorRegex).join("");
-    }
-    input = input + "+";
+    consecutiveOperators(input, "+");
     displayStuff();
 });
 
@@ -111,18 +106,12 @@ subtract.addEventListener("click", () => {
 });
 
 multiply.addEventListener("click", () => {
-    if (input[input.length-1].match(operatorRegex) !== null) {  
-        input = input.split(operatorRegex).join("");
-    }
-    input = input + "*";
+    consecutiveOperators(input, "*");
     displayStuff();
 });
 
 divide.addEventListener("click", () => {
-    if (input[input.length-1].match(operatorRegex) !== null) {  
-        input = input.split(operatorRegex).join("");
-    }
-    input = input + "/";
+    consecutiveOperators(input, "/");
     displayStuff();
 });
 
