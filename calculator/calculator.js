@@ -16,7 +16,7 @@ const seven = document.querySelector("#seven");
 const eight = document.querySelector("#eight");
 const nine = document.querySelector("#nine");
 const display = document.querySelector("#display");
-const decimalRegex = /[.]/g;
+const decimalRegex = /\.[^.]*$/;
 const operatorRegex = /[+-/*]/g;
 let input = "";
 let output;
@@ -42,6 +42,22 @@ function consecutiveOperators(inputted, operator) {
       input = input + operator;
     }
 }
+
+//NOT COMPLETED!!
+function decimalSearch(operator) {
+    let tempInput = input;
+    let i = input.lastIndexOf(operator);
+
+    if (i !== -1) {
+      temptInput = tempInput.slice(i+1);
+      if (tempInput.match(decimalRegex)) {
+        return;
+    }
+    else {
+      console.log("Nae decimal");
+    }
+  }
+} 
 
 one.addEventListener("click", () => {
     input = input + "1";
@@ -118,7 +134,7 @@ divide.addEventListener("click", () => {
 });
 
 decimal.addEventListener("click", () => {
-    let last = input.split("").pop();
+    let last = input.slice(-1);
     
     //If last digit entered was a decimal, stop user entering another decimal straight away
     if (last === ".") {
