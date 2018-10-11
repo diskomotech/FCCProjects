@@ -43,10 +43,10 @@ function consecutiveOperators(inputted, operator) {
     }
 }
 
-//NOT COMPLETED!!
+//NOT COMPLETED!! Main issue is still how to search for any of +-/* and not just one at a time but this is a good start
 function decimalSearch(operator) {
     let tempInput = input;
-    let i = input.lastIndexOf(operator);
+    let i = tempInput.lastIndexOf(operator);
 
     if (i !== -1) {
       temptInput = tempInput.slice(i+1);
@@ -54,7 +54,7 @@ function decimalSearch(operator) {
         return;
     }
     else {
-      console.log("Nae decimal");
+      input = input + operator;
     }
   }
 } 
