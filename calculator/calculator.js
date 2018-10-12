@@ -193,13 +193,23 @@ keys.addEventListener('click', e => {
             if (operator === 'divide') return firstNum / secondNum;
           };
 
-        if (!action) {
-            if (displayedNum === '0' || previousKeyType === 'operator' || previousKeyType === 'calculate') {
-              display.textContent = keyContent;
-            } else {
-              display.textContent = displayedNum + keyContent;
+          const createResultString = () => {
+            // Variables required are:
+            // 1. keyContent
+            // 2. displayedNum
+            // 3. previousKeyType
+            // 4. action
+            if (!action) {
+              return displayedNum === '0' ||
+                previousKeyType === 'operator' ||
+                previousKeyType === 'calculate'
+                ? keyContent : displayedNum + keyContent;
             }
-            calculator.dataset.previousKeyType = 'number';
+            if (action === 'decimal') {
+                if (!displayedNum.includes('.')) return displayedNum + '.';
+                if (previousKeyType === 'operator' || previousKeyType === 'calculate') return '0.';
+                return displayedNum;
+              }
           }
 
         if (action === 'add' || action === 'subtract' || action === 'multiply' || action === 'divide') {
@@ -219,15 +229,6 @@ keys.addEventListener('click', e => {
             calculator.dataset.previousKeyType = 'operator';
             calculator.dataset.operator = action;
         }
-
-          if (action === 'decimal') {
-            if (!displayedNum.includes('.')) {
-                display.textContent = displayedNum + '.';
-            } else if (previousKeyType === 'operator' || previousKeyType === 'calculate') {
-                display.textContent = '0.';
-            }
-            calculator.dataset.previousKey = 'decimal';
-          }
 
           if (action === 'clear') {
             calculator.dataset.firstValue = '';
