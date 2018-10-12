@@ -207,7 +207,9 @@ keys.addEventListener('click', e => {
             else {
                 display.textContent = displayedNum + keyContent;
             }
-          }          
+            calculator.dataset.previousKey = 'number';
+          }
+
         if (action === 'add' || action === 'subtract' || action === 'multiply' || action === 'divide') {
             key.classList.add('is-depressed');
             //Add custom attribute
@@ -215,20 +217,26 @@ keys.addEventListener('click', e => {
             calculator.dataset.firstValue = displayedNum;
             calculator.dataset.operator = action;
         }
+
           if (action === 'decimal') {
             if (!displayedNum.includes('.')) {
                 display.textContent = displayedNum + '.';
+            } else if (previousKeyType === 'operator'){
+                display.textContent = '0.';
             }
+            calculator.dataset.previousKey = 'decimal';
           }
+
           if (action === 'clear') {
-            console.log('clear key!');
+            calculator.dataset.previousKey = 'clear';
           }
+
           if (action === 'calculate') {
             const firstValue = calculator.dataset.firstValue;
             const operator = calculator.dataset.operator;
             const secondValue = displayedNum;
-
             display.textContent = calculate(firstValue, operator, secondValue);
+            calculator.dataset.previousKey = 'calculate';
           }
 
         // Remove .is-depressed class from all keys
