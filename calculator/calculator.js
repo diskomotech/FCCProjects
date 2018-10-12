@@ -185,19 +185,13 @@ keys.addEventListener('click', e => {
         let previousKeyType = calculator.dataset.previousKeyType;
         
         const calculate = (n1, operator, n2) => {
-            let result = '';
-            if (operator === 'add') {
-                result = parseFloat(parseFloat(n1)) + parseFloat(n2);
-            } else if (operator === 'subtract') {
-                result = parseFloat(n1) - parseFloat(n2);
-            } else if (operator === 'multiply') {
-                result = parseFloat(n1) * parseFloat(n2);
-            } else if (operator === 'divide') {
-                result = parseFloat(n1) / parseFloat(n2);
-            }
-
-            return result;
-        };
+            const firstNum = parseFloat(n1);
+            const secondNum = parseFloat(n2);
+            if (operator === 'add') return firstNum + secondNum;
+            if (operator === 'subtract') return firstNum - secondNum;
+            if (operator === 'multiply') return firstNum * secondNum;
+            if (operator === 'divide') return firstNum / secondNum;
+          };
 
         if (!action) {
             if (displayedNum === '0' || previousKeyType === 'operator' || previousKeyType === 'calculate') {
