@@ -209,13 +209,16 @@ keys.addEventListener('click', e => {
             }
           }          
         if (action === 'add' || action === 'subtract' || action === 'multiply' || action === 'divide') {
+            key.classList.add('is-depressed');
             //Add custom attribute
             calculator.dataset.previousKeyType = 'operator';
             calculator.dataset.firstValue = displayedNum;
             calculator.dataset.operator = action;
         }
           if (action === 'decimal') {
-            display.textContent = displayedNum + '.';
+            if (!displayedNum.includes('.')) {
+                display.textContent = displayedNum + '.';
+            }
           }
           if (action === 'clear') {
             console.log('clear key!');
@@ -227,5 +230,8 @@ keys.addEventListener('click', e => {
 
             display.textContent = calculate(firstValue, operator, secondValue);
           }
+
+        // Remove .is-depressed class from all keys
+        Array.from(key.parentNode.children).forEach(k => k.classList.remove('is-depressed'));
     }
 });
