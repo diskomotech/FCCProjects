@@ -177,8 +177,7 @@ const display = document.querySelector('.calculator__display');
 
 //We can use an event delegation pattern to listen, since keys are all children of .calculator__keys.
 keys.addEventListener('click', e => {
-    if (e.target.classList.contains('button')) {
-        //Alternative = if (e.target.matches('button'))
+    if (e.target.matches('button')) {
         const key = e.target;
         const action = key.dataset.action;
         const keyContent = key.textContent;
