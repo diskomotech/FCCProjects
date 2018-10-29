@@ -34,14 +34,32 @@ keys.addEventListener('click', (event) => {
 
 window.addEventListener('keydown', (event) => {
     if (event.which === 81) {
-        
-        //Need to link this button press with dataset.action = "snare"
-
-        //event.key = "q"
-
-        // console.log(event);
-
-        // playIt('snare');
-        // event.stopPropagation();
+        event.target.dataset.action = "snare";
         }
+    if (event.which === 87) {
+        event.target.dataset.action = "tom";
+        }
+    if (event.which === 69) {
+        event.target.dataset.action = "tink";
+        }
+    if (event.which === 65) {
+        event.target.dataset.action = "kick";
+        }
+    if (event.which === 83) {
+        event.target.dataset.action = "boom";
+        }
+    if (event.which === 68) {
+        event.target.dataset.action = "hihat";
+        }
+    if (event.which === 90) {
+        event.target.dataset.action = "ride";
+        }
+    if (event.which === 88) {
+        event.target.dataset.action = "openhat";
+        }
+    if (event.which === 67) {
+        event.target.dataset.action = "clap";
+        }
+        
+        playIt(event.target.dataset.action);
     });

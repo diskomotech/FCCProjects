@@ -1,1 +1,1 @@
-- Add back in functionality for key presses
+- Fix issue with whole window animating 
