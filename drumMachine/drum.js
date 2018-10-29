@@ -34,6 +34,10 @@ keys.addEventListener('click', (event) => {
 
 window.addEventListener('keydown', (event) => {
     if (event.which === 81) {
+        //Point event.target at right HTML element
+        
+        let realKey = event.target;
+
         event.target.dataset.action = "snare";
         }
     if (event.which === 87) {
@@ -60,6 +64,6 @@ window.addEventListener('keydown', (event) => {
     if (event.which === 67) {
         event.target.dataset.action = "clap";
         }
-        
+
         playIt(event.target.dataset.action);
     });
