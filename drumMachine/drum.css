@@ -39,7 +39,7 @@ body {
     text-align: center;
 }
 
-.drum-pad {
+.drum-pad__button {
     width: 70px;
     height: 70px;
     background-color: #0e1111;
@@ -58,15 +58,15 @@ body {
     justify-content: flex-start;
 }
 
-.top-row .drum-pad {
+.top-row .drum-pad__button {
     border: 2px solid #9900ff;
 }
 
-.mid-row .drum-pad {
+.mid-row .drum-pad__button {
     border: 2px solid #0099ff;
 }
 
-.bottom-row .drum-pad {
+.bottom-row .drum-pad__button {
     border: 2px solid #e6f042;
     margin-bottom: 30px;
 }

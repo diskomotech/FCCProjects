@@ -7,7 +7,7 @@ const dButton = document.querySelector("#D");
 const zButton = document.querySelector("#Z");
 const xButton = document.querySelector("#X");
 const cButton = document.querySelector("#C");
-const keys = document.querySelectorAll(".drum-pad");
+const keys = document.querySelectorAll(".drum-pad__button");
 
 //Will try and refactor into a single variable and object and use key/value pairs
 const snare = "https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/snare.mp3";
