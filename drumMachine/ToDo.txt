@@ -1,1 +1,0 @@
-- Refactor display text code to avoid repetition?
