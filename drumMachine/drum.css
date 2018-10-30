@@ -8,6 +8,7 @@ body {
     min-width: 100vw;
     justify-content: center;
     align-items: center;
+    background-color: #ffe6cc;
     background-image: url('https://images.unsplash.com/photo-1531824475211-72594993ce2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4de02145f4d6671a8771ec7ae742d07e&auto=format&fit=crop&w=2100&q=80');
     background-size: cover;
     background-position: center;

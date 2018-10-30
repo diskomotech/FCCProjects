@@ -1,1 +1,2 @@
-- Fix issue with whole window animating 
+- Get keypress event.target pointing at the right HTML element
+- Get animation effect to work on keypress

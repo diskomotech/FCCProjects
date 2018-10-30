@@ -2,9 +2,6 @@ const display = document.querySelector('.display');
 const keys = document.querySelector('.drum-pad');
 
 const playIt = (action) => {
-    const key = event.target;
-    // const action = event.target.dataset.action;
-
     //Initiate new instance of external sound player
     const player = new SoundPlayer();
 
@@ -16,28 +13,28 @@ const playIt = (action) => {
 
     // Display sound name 
     display.textContent = action;
-    
+}
+
+const animated = (buttonTarget) => {
     // Add press effect animation
-    key.classList.add('triggered');
+    buttonTarget.classList.add('triggered');
 
     // Remove press effect animation
     setTimeout(() => {
-        key.classList.remove('triggered');
+        buttonTarget.classList.remove('triggered');
     }, 80);
 }
 
 keys.addEventListener('click', (event) => {
     if (event.target.className === 'drum-pad__button') {
         playIt(event.target.dataset.action);
+        animated(event.target);
     }   
 });
 
 window.addEventListener('keydown', (event) => {
     if (event.which === 81) {
-        //Point event.target at right HTML element
-        
-        let realKey = event.target;
-
+        //Point event.target at right HTML element. But how?
         event.target.dataset.action = "snare";
         }
     if (event.which === 87) {
@@ -63,7 +60,7 @@ window.addEventListener('keydown', (event) => {
         }
     if (event.which === 67) {
         event.target.dataset.action = "clap";
-        }
-
+        }     
         playIt(event.target.dataset.action);
+        event.target.dataset.action = "";
     });
