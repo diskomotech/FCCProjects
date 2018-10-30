@@ -33,36 +33,40 @@ keys.addEventListener('click', (event) => {
 });
 
 window.addEventListener('keydown', (event) => {
+    //Grab array of drum-pad button elements
+    let targetArr = Array.from(event.target.querySelectorAll('.drum-pad__button'));
+    
+    //Define var in eventListener parent scope so accessible by PlayIt
+    let buttonPressed;
+
     if (event.which === 81) {
-        //Point event.target at right HTML element. But how?
-        // console.log(Array.from(event.target.childNodes)); 
-        
-        event.target.dataset.action = "snare";
+        buttonPressed = targetArr[0];
         }
     if (event.which === 87) {
-        event.target.dataset.action = "tom";
+        buttonPressed = targetArr[1];
         }
     if (event.which === 69) {
-        event.target.dataset.action = "tink";
+        buttonPressed = targetArr[2];
         }
     if (event.which === 65) {
-        event.target.dataset.action = "kick";
+        buttonPressed = targetArr[3];
         }
     if (event.which === 83) {
-        event.target.dataset.action = "boom";
+        buttonPressed = targetArr[4];
         }
     if (event.which === 68) {
-        event.target.dataset.action = "hihat";
+        buttonPressed = targetArr[5];
         }
     if (event.which === 90) {
-        event.target.dataset.action = "ride";
+        buttonPressed = targetArr[6];
         }
     if (event.which === 88) {
-        event.target.dataset.action = "openhat";
+        buttonPressed = targetArr[7];
         }
     if (event.which === 67) {
-        event.target.dataset.action = "clap";
+        buttonPressed = targetArr[8];
         }    
-        playIt(event.target.dataset.action);
-        event.target.dataset.action = "";
+        playIt(buttonPressed.dataset.action);
+        animated(buttonPressed);
+        buttonPressed.dataset.action = '';
     });
