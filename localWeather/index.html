@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Local Weather App</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/weather-icons.min.css">
-    </head>
-    <body>
-        <div class="contentBox">
-            <div class="headerTitle">
-                <h1>Free Code Camp Weather App</h1>
-            </div>
-            <div class="weatherDisplay">
-                <button type="button" class="btn btn-outline-secondary btn-lg" id="locate">Show me the weather</button>
-                <div class="location"></div>
-                <div class="weather"></div>
-                    <div class="iconVisible iconStyle" id="sunny"><i class="wi wi-day-sunny"></i></div>
-                    <div class="iconVisible iconStyle" id="stormy"><i class="wi wi-storm-showers"></i></div>
-                    <div class="iconVisible iconStyle" id="cloudy"><i class="wi wi-cloudy"></i></div>
-                    <div class="iconVisible iconStyle" id="snow"><i class="wi wi-snow"></i></div>
-                    <div class="iconVisible iconStyle" id="rainy"><i class="wi wi-rain"></i></div>
-                    <div class="iconVisible iconStyle" id="sunRain"><i class="wi wi-day-rain-wind"></i></div>
-            </div>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Local Weather App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css">
+</head>
+
+<body>
+    <div class="contentBox">
+        <div class="headerTitle">
+            <h1>Free Code Camp Weather App</h1>
         </div>
-        <script src="app.js" async defer></script>
-    </body>
+        <div class="weatherDisplay">
+            <button type="button" class="btn btn-outline-secondary btn-lg" id="locate">Show me the weather</button>
+            <div class="location"></div>
+            <div class="weather"></div>
+            <div class="iconVisible iconStyle" id="sunny"><i class="wi wi-day-sunny"></i></div>
+            <div class="iconVisible iconStyle" id="stormy"><i class="wi wi-storm-showers"></i></div>
+            <div class="iconVisible iconStyle" id="cloudy"><i class="wi wi-cloudy"></i></div>
+            <div class="iconVisible iconStyle" id="snow"><i class="wi wi-snow"></i></div>
+            <div class="iconVisible iconStyle" id="rainy"><i class="wi wi-rain"></i></div>
+            <div class="iconVisible iconStyle" id="sunRain"><i class="wi wi-day-rain-wind"></i></div>
+        </div>
+    </div>
+    <script src="app.js" async defer></script>
+</body>
+
 </html>

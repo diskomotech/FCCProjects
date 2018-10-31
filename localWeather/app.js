@@ -45,12 +45,7 @@ button.addEventListener('click', () => {
 
         if (weatherDiv.innerText === 'Rain') {
           document.querySelector('#rainy').classList.toggle('iconVisible');
-        }
-
-        // if (weatherDiv.innerText === 'SunRain') {
-        //   document.querySelector('#sunRain').classList.toggle('iconVisible');
-        // }
-        
+        }    
       })
       .then(() => {
         let temperature = document.querySelector(".temp");
