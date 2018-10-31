@@ -1,5 +1,4 @@
 const randomText = document.querySelector('#random');
-const randomUrl = 'https://en.wikipedia.org/wiki/Special:Random';
 const searchBox = document.querySelector('#searchBox');
 const searchText = document.querySelector('#searchText');
 const resultsBox = document.querySelector('.resultsBox');
@@ -8,7 +7,7 @@ let html = '';
 
 //Random Wiki article feature
 randomText.addEventListener('click', () => {
-    window.open(randomUrl);
+    window.open('https://en.wikipedia.org/wiki/Special:Random');
 });
 
 //Press magnifying glass icon to reveal search box
@@ -38,5 +37,6 @@ searchBox.addEventListener('keypress', (event) => {
                 resultsBox.innerHTML = html;
             }
         })
+    html = '';
     }
 });
