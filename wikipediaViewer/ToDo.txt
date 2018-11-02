@@ -1,3 +1,2 @@
-- Add animation to make it look smooth
-- Add cancel button to allow user to put page back the way it looked on load?
-- Make it look nice!
+- Add animation to make it look smooth - Need to switch from doing 'display: none'
+for animations to work
