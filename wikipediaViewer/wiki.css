@@ -40,6 +40,16 @@ p {
     margin: 5px 0;
 }
 
+#searchBox {
+    display: none;
+    margin: 10px 0 5px 0;
+}
+
+#cancel {
+    display: none;
+    font-size: 50px;
+}
+
 #random {
     cursor: pointer;
     margin-top: 25px;
@@ -47,11 +57,6 @@ p {
 
 .resultsBox {
     padding-top: 20px;
-}
-
-#searchBox {
-    display: none;
-    margin: 10px 0 5px 0;
 }
 
 .wikiEntries {

@@ -3,6 +3,7 @@ const searchBox = document.querySelector('#searchBox');
 const searchText = document.querySelector('#searchText');
 const resultsBox = document.querySelector('.resultsBox');
 const magnifyIcon = document.querySelector('#magnifyIcon');
+const cancelButton = document.querySelector('#cancel');
 let html = '';
 
 //Random Wiki article feature
@@ -13,6 +14,7 @@ randomText.addEventListener('click', () => {
 //Press magnifying glass icon to reveal search box
 magnifyIcon.addEventListener('click', () => {
     searchBox.style.display = 'inline';
+    cancelButton.style.display = 'inline';
     magnifyIcon.style.display = 'none';
     searchText.style.display = 'none';
 });
