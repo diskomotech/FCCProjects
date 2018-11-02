@@ -43,3 +43,13 @@ searchBox.addEventListener('keypress', (event) => {
         html = '';
     }
 });
+
+//Reset everything back to the way it was
+cancelButton.addEventListener('click', () => {
+    resultsBox.innerHTML = '';
+    searchBox.style.display = 'none';
+    searchBox.value = '';
+    cancelButton.style.display = 'none';
+    magnifyIcon.style.display = 'inline';
+    searchText.style.display = 'inline';
+})
