@@ -1,2 +1,12 @@
+- Get display working correctly dependent on which buttons pressed
 - Create calculate function
-- Add event listeners for keys. Make use of dataset attribute and event.target
+- Finish happy path
+
+- Edge cases
+- Disallow multiple decimal points
+- Nothing should happen if equals button pressed before operator key
+- Disallow multiple zeroes at start of number
+- If 2 or more operators are entered consecutively, the operation performed should be 
+the last operator entered.
+- Pressing an operator immediately following = should start a new calculation that 
+operates on the result of the previous evaluation.
