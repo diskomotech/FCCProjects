@@ -34,7 +34,7 @@ keys.addEventListener('click', (event) => {
 
 window.addEventListener('keydown', (event) => {
     //Grab array of drum-pad button elements
-    let targetArr = Array.from(event.target.querySelectorAll('.drum-pad__button'));
+    const targetArr = Array.from(event.target.querySelectorAll('.drum-pad__button'));
     
     //Define var in eventListener parent scope so accessible by PlayIt
     let buttonPressed;
