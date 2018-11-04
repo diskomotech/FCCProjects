@@ -1,10 +1,2 @@
-BIG STUFF
-- Something to disallow many zeroes in a row unless it's after a decimal point. [Half solved]
-- Something to disallow more than one decimal in a given number. [Halfway there but still '1.2.4']
-- Maybe think about how to save each single number in a var each time an operator is pressed? This might help solve the
-decimal and zero validation problems. Another alternative would be to work on building component decimal and zero validation
-functions and deploy those.
-- Rework some of the addEventListener stuff into functions so repeating less code.
-
-DETAILS
-- Use formula logic for calculation (look this up)
+- Create calculate function
+- Add event listeners for keys. Make use of dataset attribute and event.target
