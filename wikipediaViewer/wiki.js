@@ -26,7 +26,7 @@ searchBox.addEventListener('keypress', (event) => {
             let searchText = searchBox.value;
 
             //Compile Wiki page url
-            let searchUrl = `https://en.wikipedia.org//w/api.php?action=opensearch&format=json&origin=*&search=${searchText}&limit=8`
+            let searchUrl = `https://en.wikipedia.org//w/api.php?action=opensearch&format=json&origin=*&search=${searchText}&limit=8`;
             
             //Fetch Wiki API data and convert to JSON
             fetch(searchUrl)
