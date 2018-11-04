@@ -19,9 +19,9 @@ button.addEventListener('click', () => {
         
         locationDiv.innerText = `${data.name} ${data.sys.country}`;
 
-        div.className = "temp";
+        div.className = 'temp';
         celsius = Math.round(data.main.temp);
-        div.innerHTML = '<p>' + celsius + '°<a href="#" onclick="return false;">C</a></p>';
+        div.innerHTML = `<p>${celsius}°<a href='#' onclick='return false;'>C</a></p>`;
         locationDiv.after(div);
 
         //Do something here to display different icon depending on the weather
@@ -48,15 +48,15 @@ button.addEventListener('click', () => {
         }    
       })
       .then(() => {
-        const temperature = document.querySelector(".temp");
+        const temperature = document.querySelector('.temp');
         const fahrenheit = Math.round(celsius * 1.8) + 32;
 
         temperature.addEventListener('click', () => {
           if (temperature.innerText.includes('°C')) {
-            temperature.innerHTML = '<p>' + fahrenheit + '°<a href="#" onclick="return false;">F</a></p>';
+            temperature.innerHTML = `<p>${fahrenheit}°<a href='#' onclick='return false;'>F</a></p>`;
           }
           else {
-            temperature.innerHTML = '<p>' + celsius + '°<a href="#" onclick="return false;">C</a></p>';
+            temperature.innerHTML = `<p>${celsius} °<a href='#' onclick='return false;'>C</a></p>`;
           }
         })
       })
