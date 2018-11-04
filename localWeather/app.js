@@ -3,9 +3,9 @@ let celsius;
 
 button.addEventListener('click', () => {
   navigator.geolocation.getCurrentPosition(function(position) {
-    let latitude = (position.coords.latitude).toFixed(3);
-    let longitude = (position.coords.longitude).toFixed(3);
-    let url = `https://fcc-weather-api.glitch.me/api/current?lat=${latitude}&lon=${longitude}`;
+    const latitude = (position.coords.latitude).toFixed(3);
+    const longitude = (position.coords.longitude).toFixed(3);
+    const url = `https://fcc-weather-api.glitch.me/api/current?lat=${latitude}&lon=${longitude}`;
     
     (function apiCall () {
       fetch(url)
@@ -15,7 +15,7 @@ button.addEventListener('click', () => {
       .then((data) => {
         const locationDiv = document.querySelector('.location');
         const weatherDiv = document.querySelector('.weather');
-        let div = document.createElement('div');
+        const div = document.createElement('div');
         
         locationDiv.innerText = `${data.name} ${data.sys.country}`;
 
@@ -48,8 +48,8 @@ button.addEventListener('click', () => {
         }    
       })
       .then(() => {
-        let temperature = document.querySelector(".temp");
-        let fahrenheit = Math.round(celsius * 1.8) + 32;
+        const temperature = document.querySelector(".temp");
+        const fahrenheit = Math.round(celsius * 1.8) + 32;
 
         temperature.addEventListener('click', () => {
           if (temperature.innerText.includes('°C')) {
