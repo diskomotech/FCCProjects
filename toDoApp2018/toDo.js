@@ -16,7 +16,7 @@ textInput.addEventListener("keypress", (event) => {
        const textInput = document.querySelector("#textInput");
 
         //Save text input in var
-       let newToDoItem = textInput.value;
+       const newToDoItem = textInput.value;
 
        //Add (temporary) X delete button to span
        newSpan.innerHTML = '<i class="fa fa-trash"></i>';
