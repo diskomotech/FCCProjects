@@ -20,7 +20,7 @@ magnifyIcon.addEventListener('click', () => {
 });
 
 //Listen for Enter keypress in search box
-searchBox.addEventListener('keypress', (event) => {
+searchBox.addEventListener('keypress', event => {
     if (event.which === 13) {
             //Save inputted text in variable
             let searchText = searchBox.value;
@@ -30,8 +30,8 @@ searchBox.addEventListener('keypress', (event) => {
             
             //Fetch Wiki API data and convert to JSON
             fetch(searchUrl)
-            .then((response) => response.json())
-            .then((data) => {
+            .then(response => response.json())
+            .then(data => {
                 for (let i = 0; i < data[1].length; i++) {
                     html += `<div class = 'wikiEntries transitionFX'>`;
                     html += `<a href="${data[3][i]}" target="_blank">${data[1][i]}</a>`
@@ -39,6 +39,7 @@ searchBox.addEventListener('keypress', (event) => {
                     resultsBox.innerHTML = html;
                 }
             })
+            .catch(err => console.log('Error is ', err));
         // Reset html variable so new search results aren't tacked onto the end of previous search results    
         html = '';
     }
