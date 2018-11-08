@@ -30,7 +30,16 @@ searchBox.addEventListener('keypress', event => {
             
             //Fetch Wiki API data and convert to JSON
             fetch(searchUrl)
-            .then(response => response.json())
+            .then(response => {
+                if (response.ok) {
+                  return response.json();
+                } else {
+                    return Promise.reject({
+                      status: response.status,
+                      statusText: response.statusText
+                    });
+                }
+            })
             .then(data => {
                 for (let i = 0; i < data[1].length; i++) {
                     html += `<div class = 'wikiEntries transitionFX'>`;
