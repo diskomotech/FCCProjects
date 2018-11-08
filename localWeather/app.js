@@ -9,10 +9,10 @@ button.addEventListener('click', () => {
     
     (function apiCall () {
       fetch(url)
-      .then((response) => {
+      .then(response => {
         return response.json();
       })
-      .then((data) => {
+      .then(data => {
         const locationDiv = document.querySelector('.location');
         const weatherDiv = document.querySelector('.weather');
         const div = document.createElement('div');
