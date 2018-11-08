@@ -60,7 +60,7 @@ button.addEventListener('click', () => {
           }
         })
       })
-      .catch(err => console.log('ughhhh fix it!', err));
+      .catch(err => console.log('Error is ', err));
     })();
   })
 })
