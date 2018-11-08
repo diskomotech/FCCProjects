@@ -10,7 +10,14 @@ button.addEventListener('click', () => {
     (function apiCall () {
       fetch(url)
       .then(response => {
-        return response.json();
+        if (response.ok) {
+          return response.json();
+        } else {
+            return Promise.reject({
+              status: response.status,
+              statusText: response.statusText
+            });
+          }
       })
       .then(data => {
         const locationDiv = document.querySelector('.location');
