@@ -13,10 +13,7 @@ textInput.addEventListener('keypress', (e) => {
         //Create new DOM elements to be added to UL
        const li = document.createElement('li');
        const newSpan = document.createElement('span');
-       const textInput = document.querySelector('#textInput');
-
-        //Save text input in var
-       const newToDoItem = textInput.value;
+       const newToDoItem = (document.querySelector('#textInput')).value;
 
        //Add (temporary) X delete button to span
        newSpan.innerHTML = `<i class='fa fa-trash'></i>`;
