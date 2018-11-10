@@ -1,0 +1,15 @@
+.timer {
+    &__duration {
+        display: flex;
+        border: solid 2px red;
+    }
+
+    &__playback {
+        display: flex;
+        border: solid 2px greenyellow;
+    }
+}
+
+.display {
+    border: solid 2px blue;
+}

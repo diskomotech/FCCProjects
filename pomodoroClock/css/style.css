@@ -45,3 +45,21 @@ button {
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none; }
+
+.timer__duration {
+  display: flex;
+  border: solid 2px red; }
+
+.timer__playback {
+  display: flex;
+  border: solid 2px greenyellow; }
+
+.display {
+  border: solid 2px blue; }
+
+.timer {
+  font-family: 'Helvetica', sans-serif; }
+
+.display {
+  font-size: 8rem;
+  text-align: center; }
