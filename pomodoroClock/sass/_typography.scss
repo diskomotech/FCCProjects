@@ -1,8 +1,14 @@
 .timer {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Rubik', sans-serif;
+
+    &__duration h2 {
+        font-size: 3rem;
+        font-weight: 400;
+    }
 }
 
-.display {
-    font-size: 8rem;
+.display h1 {
+    font-size: 11rem;
+    font-weight: 400;
     text-align: center;
 }
