@@ -14,15 +14,25 @@
 <body>
     <div class="timer">
         <div class="timer__duration">
-            <h2 class="timer__duration-text" id="session-label">Session Length</h2>
-            <button data-action="session-increment" class="timer__duration-button" id="session-increment"><i class="material-icons">keyboard_arrow_up</i></button>
-            <h2 data-time="1500" class="timer__duration-display" id="session-length">25</h2>
-            <button data-action="session-decrement" class="timer__duration-button" id="session-decrement"><i class="material-icons">keyboard_arrow_down</i></button>
+            <div class="timer__duration-session">
+                <h2 class="timer__duration-text" id="session-label">Session Length</h2>
+                <div class="timer__duration-session-controls">
+                    <button data-action="session-increment" class="timer__duration-button" id="session-increment"><i
+                            class="material-icons">keyboard_arrow_up</i></button>
+                    <h2 data-time="1500" class="timer__duration-display" id="session-length">25</h2>
+                    <button data-action="session-decrement" class="timer__duration-button" id="session-decrement"><i
+                            class="material-icons">keyboard_arrow_down</i></button>
+                </div>
+            </div>
 
-            <h2 class="timer__duration-text" id="break-label">Break Length</h2>
-            <button data-action="break-increment" class="timer__duration-button" id="break-increment"><i class="material-icons">keyboard_arrow_up</i></button>
-            <h2 data-time="300" class="timer__duration-display" id="break-length">5</h2>
-            <button data-action="break-decrement" class="timer__duration-button" id="break-decrement"><i class="material-icons">keyboard_arrow_down</i></button>
+            <div class="timer__duration-break">
+                <h2 class="timer__duration-text" id="break-label">Break Length</h2>
+                <div class="timer__duration-break-controls">
+                    <button data-action="break-increment" class="timer__duration-button" id="break-increment"><i class="material-icons">keyboard_arrow_up</i></button>
+                    <h2 data-time="300" class="timer__duration-display" id="break-length">5</h2>
+                    <button data-action="break-decrement" class="timer__duration-button" id="break-decrement"><i class="material-icons">keyboard_arrow_down</i></button>
+                </div>
+            </div>
         </div>
 
         <div class="display">

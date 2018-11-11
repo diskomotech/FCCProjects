@@ -2,6 +2,30 @@
     &__duration {
         display: flex;
         border: solid 2px red;
+
+        &-session {
+            border: solid 2px pink;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 25rem;
+
+            &-controls {
+                border: solid 2px greenyellow;
+                display: flex;
+            }
+        }
+
+        &-break {
+            border: solid 2px orangered;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 25rem;
+
+            &-controls {
+                border: solid 2px greenyellow;
+                display: flex;
+            }
+        }
     }
 
     &__playback {
