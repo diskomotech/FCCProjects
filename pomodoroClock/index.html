@@ -14,23 +14,24 @@
 <body>
     <div class="timer">
         <div class="timer__duration">
-            <h2 class="timer__duration-text">Session Length</h2>
-            <button data-action="session-up" class="timer__duration-button"><i class="material-icons">keyboard_arrow_up</i></button>
-            <h2 data-time="1500" class="timer__duration-display">25</h2>
-            <button data-action="session-down" class="timer__duration-button"><i class="material-icons">keyboard_arrow_down</i></button>
+            <h2 class="timer__duration-text" id="session-label">Session Length</h2>
+            <button data-action="session-increment" class="timer__duration-button" id="session-increment"><i class="material-icons">keyboard_arrow_up</i></button>
+            <h2 data-time="1500" class="timer__duration-display" id="session-length">25</h2>
+            <button data-action="session-decrement" class="timer__duration-button" id="session-decrement"><i class="material-icons">keyboard_arrow_down</i></button>
 
-            <h2 class="timer__duration-text">Break Length</h2>
-            <button data-action="break-up" class="timer__duration-button"><i class="material-icons">keyboard_arrow_up</i></button>
-            <h2 data-time="300" class="timer__duration-display">5</h2>
-            <button data-action="break-down" class="timer__duration-button"><i class="material-icons">keyboard_arrow_down</i></button>
+            <h2 class="timer__duration-text" id="break-label">Break Length</h2>
+            <button data-action="break-increment" class="timer__duration-button" id="break-increment"><i class="material-icons">keyboard_arrow_up</i></button>
+            <h2 data-time="300" class="timer__duration-display" id="break-length">5</h2>
+            <button data-action="break-decrement" class="timer__duration-button" id="break-decrement"><i class="material-icons">keyboard_arrow_down</i></button>
         </div>
 
         <div class="display">
-            <h1 class="display__time-left">25:00</h1>
+            <h1 class="display__time-left" id="timer-left">25:00</h1>
         </div>
         <div class="timer__playback">
-            <button data-action="play-pause" class="playback-button"><i class="material-icons">play_arrow</i><i class="material-icons">pause</i></button>
-            <button data-action="reset" class="playback-button"><i class="material-icons">replay</i></button>
+            <button data-action="start-stop" class="playback-button" id="start-stop"><i class="material-icons">play_arrow</i><i
+                    class="material-icons">pause</i></button>
+            <button data-action="reset" class="playback-button" id="reset"><i class="material-icons">replay</i></button>
         </div>
     </div>
     <script src="app.js" async defer></script>
