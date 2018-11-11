@@ -63,4 +63,11 @@
 .display {
     border: solid 2px blue;
     padding: 5rem 0;
+
+    &__timer-label {
+        border: solid 2px greenyellow;
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 0;
+    }
 }
