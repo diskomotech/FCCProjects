@@ -3,27 +3,38 @@
         display: flex;
         border: solid 2px red;
 
+        &-text {
+            border: solid 2px lightblue;
+            display: flex;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
         &-session {
             border: solid 2px pink;
             display: flex;
             flex-wrap: wrap;
             max-width: 25rem;
-
+            flex: 1;
+            
             &-controls {
-                border: solid 2px greenyellow;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
             }
         }
 
         &-break {
-            border: solid 2px orangered;
             display: flex;
             flex-wrap: wrap;
             max-width: 25rem;
 
             &-controls {
-                border: solid 2px greenyellow;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
             }
         }
     }

@@ -49,22 +49,31 @@ button {
 .timer__duration {
   display: flex;
   border: solid 2px red; }
+  .timer__duration-text {
+    border: solid 2px lightblue;
+    display: flex;
+    flex: 1;
+    padding: 0 1rem; }
   .timer__duration-session {
     border: solid 2px pink;
     display: flex;
     flex-wrap: wrap;
-    max-width: 25rem; }
+    max-width: 25rem;
+    flex: 1; }
     .timer__duration-session-controls {
-      border: solid 2px greenyellow;
-      display: flex; }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1; }
   .timer__duration-break {
-    border: solid 2px orangered;
     display: flex;
     flex-wrap: wrap;
     max-width: 25rem; }
     .timer__duration-break-controls {
-      border: solid 2px greenyellow;
-      display: flex; }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1; }
 
 .timer__playback {
   display: flex;
