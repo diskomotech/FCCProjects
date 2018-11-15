@@ -6,60 +6,59 @@ const magnifyIcon = document.querySelector('#magnifyIcon');
 const cancelButton = document.querySelector('#cancel');
 let html = '';
 
-//Random Wiki article feature
+// Random Wiki article feature
 randomText.addEventListener('click', () => {
-    window.open('https://en.wikipedia.org/wiki/Special:Random');
+  window.open('https://en.wikipedia.org/wiki/Special:Random');
 });
 
-//Press magnifying glass icon to reveal search box
+// Press magnifying glass icon to reveal search box
 magnifyIcon.addEventListener('click', () => {
-    searchBox.style.display = 'inline';
-    cancelButton.style.display = 'inline';
-    magnifyIcon.style.display = 'none';
-    searchText.style.display = 'none';
+  searchBox.style.display = 'inline';
+  cancelButton.style.display = 'inline';
+  magnifyIcon.style.display = 'none';
+  searchText.style.display = 'none';
 });
 
-//Listen for Enter keypress in search box
-searchBox.addEventListener('keypress', event => {
-    if (event.which === 13) {
-            //Save inputted text in variable
-            let searchText = searchBox.value;
+// Listen for Enter keypress in search box
+searchBox.addEventListener('keypress', (event) => {
+  if (event.which === 13) {
+    // Save inputted text in variable
+    const textSearch = searchBox.value;
 
-            //Compile Wiki page url
-            let searchUrl = `https://en.wikipedia.org//w/api.php?action=opensearch&format=json&origin=*&search=${searchText}&limit=8`;
-            
-            //Fetch Wiki API data and convert to JSON
-            fetch(searchUrl)
-            .then(response => {
-                if (response.ok) {
-                  return response.json();
-                } else {
-                    return Promise.reject({
-                      status: response.status,
-                      statusText: response.statusText
-                    });
-                }
-            })
-            .then(data => {
-                for (let i = 0; i < data[1].length; i++) {
-                    html += `<div class = 'wikiEntries transitionFX'>`;
-                    html += `<a href="${data[3][i]}" target="_blank">${data[1][i]}</a>`
-                    html += `<p>${data[2][i]}</p></div>`; 
-                    resultsBox.innerHTML = html;
-                }
-            })
-            .catch(err => console.log('Error is ', err));
-        // Reset html variable so new search results aren't tacked onto the end of previous search results    
-        html = '';
-    }
+    // Compile Wiki page url
+    const searchUrl = `https://en.wikipedia.org//w/api.php?action=opensearch&format=json&origin=*&search=${textSearch}&limit=8`;
+
+    // Fetch Wiki API data and convert to JSON
+    fetch(searchUrl)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        return Promise.reject({
+          status: response.status,
+          statusText: response.statusText,
+        });
+      })
+      .then((data) => {
+        for (let i = 0; i < data[1].length; i++) {
+          html += '<div class = \'wikiEntries transitionFX\'>';
+          html += `<a href="${data[3][i]}" target="_blank">${data[1][i]}</a>`;
+          html += `<p>${data[2][i]}</p></div>`;
+          resultsBox.innerHTML = html;
+        }
+      })
+      .catch(err => console.log('Error is ', err));
+    // Reset html variable
+    html = '';
+  }
 });
 
-//Reset everything back to the way it was
+// Reset everything back to the way it was
 cancelButton.addEventListener('click', () => {
-    resultsBox.innerHTML = '';
-    searchBox.style.display = 'none';
-    searchBox.value = '';
-    cancelButton.style.display = 'none';
-    magnifyIcon.style.display = 'inline';
-    searchText.style.display = 'inline';
-})
+  resultsBox.innerHTML = '';
+  searchBox.style.display = 'none';
+  searchBox.value = '';
+  cancelButton.style.display = 'none';
+  magnifyIcon.style.display = 'inline';
+  searchText.style.display = 'inline';
+});
