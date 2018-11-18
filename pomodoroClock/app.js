@@ -9,23 +9,22 @@ function buttonClicked() {
   const dataAttribute = this.dataset.action;
   const sessionDisplay = document.querySelector('#session-length');
   const breakDisplay = document.querySelector('#break-length');
-  // let dataTime = sessionDisplay.dataset.time;
 
   if (dataAttribute === 'session-increment') {
+    if (sessionDisplay.textContent >= 60) return;
     sessionDisplay.textContent++;
-
-    // dataTime = Number(dataTime) + 60;
-    // dataTime = dataTime.toString();
-    // console.log(dataTime);
   }
   if (dataAttribute === 'session-decrement') {
-    console.log(dataAttribute);
+    if (sessionDisplay.textContent <= 1) return;
+    sessionDisplay.textContent--;
   }
   if (dataAttribute === 'break-increment') {
-    console.log(dataAttribute);
+    if (breakDisplay.textContent >= 60) return;
+    breakDisplay.textContent++;
   }
   if (dataAttribute === 'break-decrement') {
-    console.log(dataAttribute);
+    if (breakDisplay.textContent <= 1) return;
+    breakDisplay.textContent--;
   }
   if (dataAttribute === 'start-stop') {
     console.log(dataAttribute);
