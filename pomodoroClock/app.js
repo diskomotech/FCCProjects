@@ -9,6 +9,7 @@ function buttonClicked() {
   const dataAttribute = this.dataset.action;
   const sessionDisplay = document.querySelector('#session-length');
   const breakDisplay = document.querySelector('#break-length');
+  let playing = false;
 
   if (dataAttribute === 'session-increment') {
     if (sessionDisplay.textContent >= 60) return;
@@ -27,7 +28,9 @@ function buttonClicked() {
     breakDisplay.textContent--;
   }
   if (dataAttribute === 'start-stop') {
-    console.log(dataAttribute);
+    const sessionTime = sessionDisplay.textContent * 60;
+    timer(sessionTime);
+    playing = !playing;
   }
   if (dataAttribute === 'reset') {
     clearInterval(countdown);
