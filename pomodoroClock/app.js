@@ -7,8 +7,16 @@ buttons.forEach(button => button.addEventListener('click', buttonClicked));
 function buttonClicked() {
   // Work out which button was pressed
   const dataAttribute = this.dataset.action;
+  const sessionDisplay = document.querySelector('#session-length');
+  const breakDisplay = document.querySelector('#break-length');
+  // let dataTime = sessionDisplay.dataset.time;
+
   if (dataAttribute === 'session-increment') {
-    console.log(dataAttribute);
+    sessionDisplay.textContent++;
+
+    // dataTime = Number(dataTime) + 60;
+    // dataTime = dataTime.toString();
+    // console.log(dataTime);
   }
   if (dataAttribute === 'session-decrement') {
     console.log(dataAttribute);
