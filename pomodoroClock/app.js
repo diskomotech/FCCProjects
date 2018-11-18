@@ -37,6 +37,7 @@ function timer(seconds) {
   // Calculate time that timer should end in seconds
   const then = now + seconds * 1000;
 
+  // Display time left immediately
   displayTimeLeft(seconds);
 
   // Set and run our timer countdown
@@ -54,6 +55,7 @@ function timer(seconds) {
   }, 1000);
 }
 
+// Function to display the time left
 function displayTimeLeft(seconds) {
   const minutes = Math.floor(seconds / 60);
   const remainderSeconds = seconds % 60;
