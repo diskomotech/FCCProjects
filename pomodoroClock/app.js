@@ -10,14 +10,19 @@ function buttonClicked(e) {
   const dataAttribute = this.dataset.action;
   const sessionDisplay = document.querySelector('#session-length');
   const breakDisplay = document.querySelector('#break-length');
+  let sessionTime;
 
   if (dataAttribute === 'session-increment') {
     if (sessionDisplay.textContent >= 60) return;
     sessionDisplay.textContent++;
+    sessionTime = sessionDisplay.textContent * 60;
+    displayTimeLeft(sessionTime);
   }
   if (dataAttribute === 'session-decrement') {
     if (sessionDisplay.textContent <= 1) return;
     sessionDisplay.textContent--;
+    sessionTime = sessionDisplay.textContent * 60;
+    displayTimeLeft(sessionTime);
   }
   if (dataAttribute === 'break-increment') {
     if (breakDisplay.textContent >= 60) return;
@@ -28,14 +33,17 @@ function buttonClicked(e) {
     breakDisplay.textContent--;
   }
   if (dataAttribute === 'start-stop') {
-    const sessionTime = sessionDisplay.textContent * 60;    
     if (!playing) {
       e.preventDefault();
-      timer(sessionTime);
+      // Somehow I need to use the secondsLeft number and use it to pass as the parameter to timer()
+      // Convert the timerDisplay string into seconds (as integer)
+      console.log(timerDisplay.textContent);
+      timer(60);
       playing = true;
       console.log(playing);
     } else if (playing) {
       e.preventDefault();
+      console.log(timerDisplay.textContent);
       playing = false;
       console.log(playing);
       clearInterval(countdown);
@@ -51,9 +59,6 @@ function buttonClicked(e) {
 }
 
 function timer(seconds) {
-  // Clear any previous timer immediately
-  // clearInterval(countdown);
-
   // Get time now in milliseconds
   const now = Date.now();
 
