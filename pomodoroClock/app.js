@@ -1,15 +1,15 @@
 const buttons = document.querySelectorAll('button');
 const timerDisplay = document.querySelector('.display__time-left');
 let countdown;
+let playing = false;
 
 buttons.forEach(button => button.addEventListener('click', buttonClicked));
 
-function buttonClicked() {
+function buttonClicked(e) {
   // Work out which button was pressed
   const dataAttribute = this.dataset.action;
   const sessionDisplay = document.querySelector('#session-length');
   const breakDisplay = document.querySelector('#break-length');
-  let playing = false;
 
   if (dataAttribute === 'session-increment') {
     if (sessionDisplay.textContent >= 60) return;
@@ -28,10 +28,20 @@ function buttonClicked() {
     breakDisplay.textContent--;
   }
   if (dataAttribute === 'start-stop') {
-    const sessionTime = sessionDisplay.textContent * 60;
-    timer(sessionTime);
-    playing = !playing;
+    const sessionTime = sessionDisplay.textContent * 60;    
+    if (!playing) {
+      e.preventDefault();
+      timer(sessionTime);
+      playing = true;
+      console.log(playing);
+    } else if (playing) {
+      e.preventDefault();
+      playing = false;
+      console.log(playing);
+      clearInterval(countdown);
+    }
   }
+
   if (dataAttribute === 'reset') {
     clearInterval(countdown);
     sessionDisplay.textContent = 25;
@@ -42,7 +52,7 @@ function buttonClicked() {
 
 function timer(seconds) {
   // Clear any previous timer immediately
-  clearInterval(countdown);
+  // clearInterval(countdown);
 
   // Get time now in milliseconds
   const now = Date.now();
