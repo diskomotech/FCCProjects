@@ -62,9 +62,10 @@ function displayTimeLeft(seconds) {
 
   // Generate the textContent of time remaining - adding in a '0' when secs under 10
   const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
-  // Display time remaining in tab
-  document.title = display;
 
   // Show the time remaining in display
   timerDisplay.textContent = display;
+
+  // Display time remaining in tab
+  document.title = display;
 }
