@@ -30,7 +30,10 @@ function buttonClicked() {
     console.log(dataAttribute);
   }
   if (dataAttribute === 'reset') {
-    console.log(dataAttribute);
+    clearInterval(countdown);
+    sessionDisplay.textContent = 25;
+    breakDisplay.textContent = 5;
+    displayTimeLeft(1500);
   }
 }
 
