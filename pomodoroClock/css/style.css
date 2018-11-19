@@ -3,13 +3,13 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box;
+  box-sizing: inherit;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -45,6 +45,9 @@ button {
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none; }
+
+body {
+  margin: 0; }
 
 .timer__duration {
   display: flex;
@@ -92,11 +95,16 @@ button {
 .display {
   border: solid 2px blue;
   padding: 5rem 0; }
+  .display__time-left {
+    margin: 0 auto; }
   .display__timer-label {
     border: solid 2px greenyellow;
     display: flex;
     justify-content: center;
     padding: 1.5rem 0; }
+
+body {
+  text-align: center; }
 
 .timer {
   font-family: 'Rubik', sans-serif; }
@@ -104,10 +112,9 @@ button {
     font-size: 3rem;
     font-weight: 400; }
 
-.display h1 {
+.display__time-left {
   font-size: 11rem;
-  font-weight: 400;
-  text-align: center; }
+  font-weight: 400; }
 
 .display h2 {
   font-size: 3rem; }

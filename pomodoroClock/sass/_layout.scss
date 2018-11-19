@@ -1,5 +1,8 @@
-.timer {
+body {
+    margin: 0;
+}
 
+.timer {
     &__duration {
         display: flex;
         border: solid 2px red;
@@ -63,6 +66,10 @@
 .display {
     border: solid 2px blue;
     padding: 5rem 0;
+
+    &__time-left {
+        margin: 0 auto;
+    }
 
     &__timer-label {
         border: solid 2px greenyellow;

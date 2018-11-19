@@ -1,3 +1,7 @@
+body {
+    text-align: center;
+}
+
 .timer {
     font-family: 'Rubik', sans-serif;
 
@@ -8,10 +12,9 @@
 }
 
 .display {
-    h1 {
+    &__time-left {
         font-size: 11rem;
         font-weight: 400;
-        text-align: center;
     }
 
     h2 {

@@ -3,7 +3,7 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    box-sizing: border-box;
+    box-sizing: inherit;
     display: flex;
     align-items: center;
     height: 100vh;
@@ -43,10 +43,6 @@ button:active,
 button:focus {
   outline: none;
 }
-
-
-
-
 
 button {
     display: inline-block;
