@@ -4,7 +4,6 @@ const sessionDisplay = document.querySelector('#session-length');
 const breakDisplay = document.querySelector('#break-length');
 const timerLabel = document.querySelector('#timer-label');
 let countdown;
-// Should this be global? Can it go in buttonClicked instead?
 let playing = false;
 
 buttons.forEach(button => button.addEventListener('click', buttonClicked));
@@ -13,7 +12,6 @@ function buttonClicked() {
   // Work out which button was pressed
   const dataAttribute = this.dataset.action;
   let sessionTime;
-  let breakTime;
 
   if (dataAttribute === 'session-increment') {
     // Stop user setting value > 60
