@@ -3,6 +3,7 @@ const timerDisplay = document.querySelector('.display__time-left');
 const sessionDisplay = document.querySelector('#session-length');
 const breakDisplay = document.querySelector('#break-length');
 const timerLabel = document.querySelector('#timer-label');
+const beep = document.querySelector('audio');
 let countdown;
 let playing = false;
 
@@ -62,6 +63,8 @@ function buttonClicked() {
   }
 
   if (dataAttribute === 'reset') {
+    // Stop beep if it's playing
+    beep.pause();
     // Stop timer running
     clearInterval(countdown);
     // Reset session and break duration values to their defaults
@@ -104,6 +107,8 @@ function displayTimeLeft(seconds) {
 
 function timerHitsZero(lastTimer) {
   let newTime;
+  // Play the beep noise
+  beep.play();
   // Stop running timer
   clearInterval(countdown);
   if (lastTimer === 'Session') {
