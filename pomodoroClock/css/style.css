@@ -50,56 +50,51 @@ button {
 body {
   margin: 0; }
 
-.timer__duration {
-  display: flex;
-  border: solid 2px red; }
-  .timer__duration-text {
-    border: solid 2px lightblue;
-    display: flex;
-    flex: 1;
-    padding: 1rem 1rem; }
-  .timer__duration-session {
-    border: solid 2px pink;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 25rem;
-    flex: 1; }
-    .timer__duration-session-controls {
+.timer {
+  border: solid 2px #21e6c1;
+  border-radius: 1rem; }
+  .timer__duration {
+    display: flex; }
+    .timer__duration-text {
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex: 1;
-      margin: 1rem 0; }
-  .timer__duration-break {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 25rem; }
-    .timer__duration-break-controls {
+      padding: 1rem 1rem; }
+    .timer__duration-session {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 1;
-      margin: 1rem 0; }
-  .timer__duration-display {
-    padding: 0 1.5rem; }
-  .timer__duration button {
-    border: solid 1px black;
-    padding: 0.5rem 1rem;
-    border-radius: 25%; }
-
-.timer__playback {
-  display: flex;
-  border: solid 2px greenyellow;
-  align-items: center;
-  justify-content: center; }
+      flex-wrap: wrap;
+      max-width: 25rem;
+      flex: 1; }
+      .timer__duration-session-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        margin: 1rem 0; }
+    .timer__duration-break {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 25rem; }
+      .timer__duration-break-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        margin: 1rem 0; }
+    .timer__duration-display {
+      padding: 0 1.5rem; }
+    .timer__duration button {
+      padding: 0.5rem 1rem;
+      border-radius: 25%; }
+  .timer__playback {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .display {
-  border: solid 2px blue;
-  padding: 5rem 0; }
+  padding: 2rem 0; }
   .display__time-left {
     margin: 0 auto; }
   .display__timer-label {
-    border: solid 2px greenyellow;
     display: flex;
     justify-content: center;
     padding: 1.5rem 0; }
@@ -107,8 +102,16 @@ body {
 .paused {
   opacity: 0; }
 
+#break-text {
+  padding-left: 3.5rem; }
+
 body {
+  background-color: #1f4287;
+  color: #c8e4fe;
   text-align: center; }
+
+i {
+  color: #c8e4fe; }
 
 .timer {
   font-family: 'Rubik', sans-serif; }

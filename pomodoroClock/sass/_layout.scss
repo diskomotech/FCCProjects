@@ -3,19 +3,19 @@ body {
 }
 
 .timer {
+    border: solid 2px $color-tertiary;
+    border-radius: 1rem;
+
     &__duration {
         display: flex;
-        border: solid 2px red;
 
         &-text {
-            border: solid 2px lightblue;
             display: flex;
             flex: 1;
             padding: 1rem 1rem;
         }
 
         &-session {
-            border: solid 2px pink;
             display: flex;
             flex-wrap: wrap;
             max-width: 25rem;
@@ -49,7 +49,6 @@ body {
         }
 
         button {
-            border: solid 1px black;
             padding: 0.5rem 1rem;
             border-radius: 25%;
         }
@@ -57,22 +56,19 @@ body {
 
     &__playback {
         display: flex;
-        border: solid 2px greenyellow;
         align-items: center;
         justify-content: center;
     }
 }
 
 .display {
-    border: solid 2px blue;
-    padding: 5rem 0;
+    padding: 2rem 0;
 
     &__time-left {
         margin: 0 auto;
     }
 
     &__timer-label {
-        border: solid 2px greenyellow;
         display: flex;
         justify-content: center;
         padding: 1.5rem 0;
@@ -81,4 +77,8 @@ body {
 
 .paused {
     opacity: 0;
+}
+
+#break-text {
+    padding-left: 3.5rem;
 }

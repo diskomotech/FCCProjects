@@ -1,5 +1,11 @@
 body {
+    background-color: $color-primary;
+    color: $color-secondary;
     text-align: center;
+}
+
+i {
+    color: $color-secondary;
 }
 
 .timer {
