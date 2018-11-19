@@ -1,2 +1,1 @@
 Fix bug whereby timer display moves depending on the font width of the numbers - STRUGGLING
-Style it
