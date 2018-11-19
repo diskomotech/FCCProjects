@@ -37,13 +37,11 @@ function buttonClicked() {
     // Stop user setting value > 60
     if (breakDisplay.textContent >= 60) return;
     breakDisplay.textContent++;
-    breakTime = breakDisplay.textContent * 60;
   }
   if (dataAttribute === 'break-decrement') {
     // Stop user setting value < 1
     if (breakDisplay.textContent <= 1) return;
     breakDisplay.textContent--;
-    breakTime = breakDisplay.textContent * 60;
   }
   if (dataAttribute === 'start-stop') {
     if (!playing) {
@@ -112,8 +110,7 @@ function timerHitsZero(lastTimer) {
     newTime = breakDisplay.textContent * 60;
     timer(newTime);
     timerLabel.textContent = 'Break';
-  }
-  if (lastTimer === 'Break') {
+  } else {
     newTime = sessionDisplay.textContent * 60;
     timer(newTime);
     timerLabel.textContent = 'Session';
