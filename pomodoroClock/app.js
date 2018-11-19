@@ -5,6 +5,7 @@ const breakDisplay = document.querySelector('#break-length');
 const timerLabel = document.querySelector('#timer-label');
 const beep = document.querySelector('audio');
 let countdown;
+let paused;
 let playing = false;
 
 buttons.forEach(button => button.addEventListener('click', buttonClicked));
@@ -46,6 +47,9 @@ function buttonClicked() {
   }
   if (dataAttribute === 'start-stop') {
     if (!playing) {
+      // Stop paused effect from running
+      clearInterval(paused);
+      timerDisplay.classList.remove('paused');
       // Set flag from false to true
       playing = true;
       // Take the timer display string, split into array and convert to numbers
@@ -59,12 +63,16 @@ function buttonClicked() {
       playing = false;
       // Clear interval to pause the timer
       clearInterval(countdown);
+      paused = setInterval(() => timerDisplay.classList.toggle('paused'), 550);
     }
   }
 
   if (dataAttribute === 'reset') {
+    // Remove paused class
+    timerDisplay.classList.remove('paused');
     // Stop beep if it's playing
     beep.pause();
+    clearInterval(paused);
     // Stop timer running
     clearInterval(countdown);
     // Reset session and break duration values to their defaults
@@ -85,7 +93,7 @@ function timer(seconds) {
   countdown = setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
     // Stop running when we hit zero
-    if (secondsLeft <= 0) {
+    if (secondsLeft == 0) {
       (timerLabel.textContent === 'Session') ? timerHitsZero('Session') : timerHitsZero('Break'); // eslint-disable-line no-unused-expressions
     }
     // Update the display with the remaining time

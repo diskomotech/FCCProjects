@@ -1,5 +1,2 @@
-Fix bug whereby on changeover from session to break (and vice versa) we display 0:00 and then 4:59. Never shows 5:00
 Fix bug whereby timer display moves depending on the font width of the numbers - STRUGGLING
-Have timer display flash text whilst paused
-Revert default time values (25:00 and 5:00)
 Style it
