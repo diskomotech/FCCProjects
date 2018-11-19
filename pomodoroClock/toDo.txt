@@ -1,12 +1,5 @@
-User Story #22: When a session countdown reaches zero, and a new 
-countdown begins, the element with the id of timer-label should display a string indicating a break 
-has begun.
-
 User Story #23: When a session countdown reaches zero, a new break 
 countdown should begin, counting down from the value currently displayed in the id="break-length" element.
-
-User Story #24: When a break countdown reaches zero, and a new countdown 
-begins, the element with the id of timer-label should display a string indicating a session has begun.
 
 User Story #25: When a break countdown reaches zero, a new session 
 countdown should begin, counting down from the value currently displayed in the id="session-length" 
@@ -22,3 +15,4 @@ when the element with the id of reset is clicked.
 
 Remove any unnecessary HTML ID tags
 Revert default time values (25:00 and 5:00)
+Fix bug whereby on changeover from session to break (and vice versa) we display 0:00 and then 4:59. Never shows 5:00

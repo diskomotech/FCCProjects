@@ -1,5 +1,8 @@
 const buttons = document.querySelectorAll('button');
 const timerDisplay = document.querySelector('.display__time-left');
+const sessionDisplay = document.querySelector('#session-length');
+const breakDisplay = document.querySelector('#break-length');
+const timerLabel = document.querySelector('#timer-label');
 let countdown;
 // Should this be global? Can it go in buttonClicked instead?
 let playing = false;
@@ -9,8 +12,6 @@ buttons.forEach(button => button.addEventListener('click', buttonClicked));
 function buttonClicked() {
   // Work out which button was pressed
   const dataAttribute = this.dataset.action;
-  const sessionDisplay = document.querySelector('#session-length');
-  const breakDisplay = document.querySelector('#break-length');
   let sessionTime;
   let breakTime;
 
@@ -85,9 +86,8 @@ function timer(seconds) {
   countdown = setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
     // Stop running when we hit zero
-    if (secondsLeft < 0) {
-      clearInterval(countdown);
-      return;
+    if (secondsLeft <= 0) {
+      (timerLabel.textContent === 'Session') ? timerHitsZero('Session') : timerHitsZero('Break'); // eslint-disable-line no-unused-expressions
     }
     // Update the display with the remaining time
     displayTimeLeft(secondsLeft);
@@ -104,4 +104,20 @@ function displayTimeLeft(seconds) {
   timerDisplay.textContent = display;
   // Display time remaining in tab
   document.title = display;
+}
+
+function timerHitsZero(lastTimer) {
+  let newTime;
+  // Stop running timer
+  clearInterval(countdown);
+  if (lastTimer === 'Session') {
+    newTime = breakDisplay.textContent * 60;
+    timer(newTime);
+    timerLabel.textContent = 'Break';
+  }
+  if (lastTimer === 'Break') {
+    newTime = sessionDisplay.textContent * 60;
+    timer(newTime);
+    timerLabel.textContent = 'Session';
+  }
 }
