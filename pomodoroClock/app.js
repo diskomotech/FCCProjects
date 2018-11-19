@@ -34,18 +34,12 @@ function buttonClicked(e) {
   }
   if (dataAttribute === 'start-stop') {
     if (!playing) {
-      e.preventDefault();
-      // Somehow I need to use the secondsLeft number and use it to pass as the parameter to timer()
-      // Convert the timerDisplay string into seconds (as integer)
-      console.log(timerDisplay.textContent);
-      timer(60);
+      const [mins, secs] = timerDisplay.textContent.split(':').map(parseFloat);
+      const secondsOnPause = (mins * 60) + secs;
+      timer(secondsOnPause);
       playing = true;
-      console.log(playing);
     } else if (playing) {
-      e.preventDefault();
-      console.log(timerDisplay.textContent);
       playing = false;
-      console.log(playing);
       clearInterval(countdown);
     }
   }
