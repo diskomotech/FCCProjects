@@ -14,12 +14,14 @@ function buttonClicked(e) {
 
   if (dataAttribute === 'session-increment') {
     if (sessionDisplay.textContent >= 60) return;
+    if (playing === true) return;
     sessionDisplay.textContent++;
     sessionTime = sessionDisplay.textContent * 60;
     displayTimeLeft(sessionTime);
   }
   if (dataAttribute === 'session-decrement') {
     if (sessionDisplay.textContent <= 1) return;
+    if (playing === true) return;
     sessionDisplay.textContent--;
     sessionTime = sessionDisplay.textContent * 60;
     displayTimeLeft(sessionTime);
