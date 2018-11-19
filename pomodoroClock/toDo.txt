@@ -21,3 +21,4 @@ User Story #28: The audio element with id of beep must stop playing and be rewou
 when the element with the id of reset is clicked.
 
 Remove any unnecessary HTML ID tags
+Revert default time values (25:00 and 5:00)

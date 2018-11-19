@@ -12,6 +12,7 @@ function buttonClicked() {
   const sessionDisplay = document.querySelector('#session-length');
   const breakDisplay = document.querySelector('#break-length');
   let sessionTime;
+  let breakTime;
 
   if (dataAttribute === 'session-increment') {
     // Stop user setting value > 60
@@ -37,11 +38,13 @@ function buttonClicked() {
     // Stop user setting value > 60
     if (breakDisplay.textContent >= 60) return;
     breakDisplay.textContent++;
+    breakTime = breakDisplay.textContent * 60;
   }
   if (dataAttribute === 'break-decrement') {
     // Stop user setting value < 1
     if (breakDisplay.textContent <= 1) return;
     breakDisplay.textContent--;
+    breakTime = breakDisplay.textContent * 60;
   }
   if (dataAttribute === 'start-stop') {
     if (!playing) {
