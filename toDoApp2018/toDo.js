@@ -1,4 +1,5 @@
 const ul = document.querySelector('ul');
+const textInput = document.querySelector('#textInput');
 
 // Mark item as completed
 ul.addEventListener('click', (e) => {
@@ -28,7 +29,7 @@ textInput.addEventListener('keypress', (e) => {
 
 // Delete list item when trashcan icon clicked
 ul.addEventListener('click', (e) => {
-  if (e.target.tagName == 'I') {
+  if (e.target.tagName === 'I') {
     e.target.parentNode.parentNode.remove();
   }
 });
