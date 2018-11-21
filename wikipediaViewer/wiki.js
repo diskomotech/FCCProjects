@@ -39,13 +39,13 @@ searchBox.addEventListener('keypress', (event) => {
           statusText: response.statusText,
         });
       })
-      .then((data) => {
-        for (let i = 0; i < data[1].length; i++) {
+      .then((data) => {      
+        data[1].forEach((item, index) => {
           html += '<div class = \'wikiEntries transitionFX\'>';
-          html += `<a href="${data[3][i]}" target="_blank">${data[1][i]}</a>`;
-          html += `<p>${data[2][i]}</p></div>`;
+          html += `<a href="${data[3][index]}" target="_blank">${data[1][index]}</a>`;
+          html += `<p>${data[2][index]}</p></div>`;
           resultsBox.innerHTML = html;
-        }
+        });
       })
       .catch(err => new Error(`Error is ${err}`));
     // Reset html variable
