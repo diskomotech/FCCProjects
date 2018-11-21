@@ -65,7 +65,7 @@ button.addEventListener('click', () => {
             }
           });
         })
-        .catch(err => console.log('Error is ', err));
+        .catch(err => new Error(`Error is ${err}`));
     }());
   });
 });
