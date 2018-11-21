@@ -1,1 +1,3 @@
-Fix bug whereby timer display moves depending on the font width of the numbers - STRUGGLING
+Fix bug whereby timer display moves depending on the font width of the numbers -
+  Discovered that the issue is with the cont used. Just tried switching to Inconsolata
+  bug has gone
