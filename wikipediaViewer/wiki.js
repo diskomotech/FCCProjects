@@ -47,7 +47,7 @@ searchBox.addEventListener('keypress', (event) => {
           resultsBox.innerHTML = html;
         }
       })
-      .catch(err => console.log('Error is ', err));
+      .catch(err => new Error(`Error is ${err}`));
     // Reset html variable
     html = '';
   }
