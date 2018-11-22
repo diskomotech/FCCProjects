@@ -9,7 +9,7 @@ keys.addEventListener('click', (e) => {
 
     // No dataset attribute so must be number key
     if (!action) {
-      console.log('number key!');
+      displayInput(key.textContent);
     }
 
     if (action === 'add' || action === 'subtract' || action === 'multiply' || action === 'divide') {
@@ -29,3 +29,7 @@ keys.addEventListener('click', (e) => {
     }
   }
 });
+
+function displayInput(keyPressed) {
+  display.textContent = keyPressed;
+}
