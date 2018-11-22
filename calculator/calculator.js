@@ -9,10 +9,11 @@ keys.addEventListener('click', (e) => {
     const action = key.dataset.action;
     const keyContent = key.textContent;
     const displayedNum = display.textContent;
+    const previousKeyType = calculator.dataset.previousKeyType;
 
     // No dataset attribute so must be number key
     if (!action) {
-      if (displayedNum === '0') {
+      if (displayedNum === '0' || previousKeyType === 'operator') {
         display.textContent = keyContent;
       } else {
         display.textContent = displayedNum + keyContent;
@@ -20,11 +21,11 @@ keys.addEventListener('click', (e) => {
     }
 
     if (action === 'add' || action === 'subtract' || action === 'multiply' || action === 'divide') {
-      console.log('operator key!');
+      calculator.dataset.previousKeyType = 'operator';
     }
 
     if (action === 'decimal') {
-      display.textContent = displayedNum + keyContent;
+      display.textContent = `${displayedNum}.`;
     }
 
     if (action === 'clear') {
