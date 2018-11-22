@@ -24,7 +24,7 @@ keys.addEventListener('click', (e) => {
     }
 
     if (action === 'decimal') {
-      console.log('decimal key!');
+      display.textContent = displayedNum + keyContent;
     }
 
     if (action === 'clear') {
