@@ -31,6 +31,7 @@ keys.addEventListener('click', (e) => {
       } else {
         display.textContent = displayedNum + keyContent;
       }
+      calculator.dataset.previousKey = 'number';
     }
 
     if (action === 'add' || action === 'subtract' || action === 'multiply' || action === 'divide') {
@@ -42,11 +43,14 @@ keys.addEventListener('click', (e) => {
     if (action === 'decimal') {
       if (!displayedNum.includes('.')) {
         display.textContent = `${displayedNum}.`;
+      } else if (previousKeyType === 'operator') {
+        display.textContent = '0.';
       }
+      calculator.dataset.previousKey = 'decimal';
     }
 
     if (action === 'clear') {
-      console.log('clear key!');
+      calculator.dataset.previousKeyType = 'clear';
     }
 
     if (action === 'calculate') {
@@ -54,6 +58,7 @@ keys.addEventListener('click', (e) => {
       const operator = calculator.dataset.operator;
       const secondValue = displayedNum;
       display.textContent = calculate(firstValue, operator, secondValue);
+      calculator.dataset.previousKeyType = 'calculate';
     }
   }
 });
