@@ -24,6 +24,9 @@ keys.addEventListener('click', (e) => {
     const displayedNum = display.textContent;
     const previousKeyType = calculator.dataset.previousKeyType;
 
+    Array.from(key.parentNode.children)
+      .forEach(k => k.classList.remove('is-depressed'));
+
     // No dataset attribute so must be number key
     if (!action) {
       if (displayedNum === '0' || previousKeyType === 'operator') {
@@ -35,6 +38,7 @@ keys.addEventListener('click', (e) => {
     }
 
     if (action === 'add' || action === 'subtract' || action === 'multiply' || action === 'divide') {
+      key.classList.add('is-depressed');
       calculator.dataset.previousKeyType = 'operator';
       calculator.dataset.firstValue = displayedNum;
       calculator.dataset.operator = action;
