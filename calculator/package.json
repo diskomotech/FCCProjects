@@ -15,7 +15,9 @@
   },
   "author": "Jim Wright",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "event-stream": "^3.3.4"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "concat": "^1.0.3",
