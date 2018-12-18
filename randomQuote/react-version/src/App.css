@@ -1,0 +1,46 @@
+#wrapper {
+  display: flex;
+  background-color: lightblue;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1512699057394-81542d1afef2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1b757d5297ec263b5b51e01799c299ba&auto=format&fit=crop&w=1349&q=80");
+}
+
+#quote-box {
+  min-height: 250px;
+  margin: 0 auto;
+  align-self: center;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 35px;
+  background-color: #fdfdfd;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+#tweet-quote {
+  font-size: 2.5em;
+  display: inline;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#new-quote {
+  width: 120px;
+  display: inline;
+}
+
+#author,
+#new-quote {
+  align-self: flex-end;
+}
+
+#text {
+  padding: 10px;
+}
