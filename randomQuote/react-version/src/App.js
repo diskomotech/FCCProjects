@@ -19,7 +19,6 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <h1>Hello world</h1>
         <div id="wrapper">
           <div id="quote-box" className="col-lg-5">
             <div id="text">
