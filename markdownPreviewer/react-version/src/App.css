@@ -1,1 +1,27 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.editor-container input {
+  margin: 20px 0;
+  height: 40vh;
+  width: 70vw;
+}
+
+.previewer-container {
+  display: flex;
+  background-color: aquamarine;
+  height: 50vh;
+  width: 100%;
+}

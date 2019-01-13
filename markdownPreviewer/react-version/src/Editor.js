@@ -29,7 +29,6 @@ class Editor extends Component {
             />
           </label>
         </form>
-        <Previewer />
       </div>
     );
   }

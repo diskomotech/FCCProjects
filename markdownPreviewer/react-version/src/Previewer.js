@@ -2,7 +2,7 @@ import React from "react";
 
 const Previewer = () => {
   return (
-    <div id="editor">
+    <div className="previewer-container">
       <p>Ja</p>
     </div>
   );
