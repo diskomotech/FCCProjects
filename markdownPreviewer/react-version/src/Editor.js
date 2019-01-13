@@ -1,16 +1,15 @@
 import React from "react";
 
-const Editor = ({ rawText, handleChange }) => {
+const Editor = props => {
   return (
     <div className="editor-container">
       <form>
         <label>
-          Editor
-          <input
-            type="textarea"
+          <textarea
+            type="text"
             id="editor"
-            value={rawText}
-            onChange={handleChange}
+            value={props.markdown}
+            onChange={props.handleChange}
           />
         </label>
       </form>

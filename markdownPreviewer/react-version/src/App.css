@@ -13,7 +13,7 @@
   width: 100%;
 }
 
-.editor-container input {
+.editor-container textarea {
   margin: 20px 0;
   height: 40vh;
   width: 50vw;
@@ -24,12 +24,12 @@
   align-items: center;
   justify-content: center;
   background-color: aquamarine;
-  height: 50vh;
   width: 100%;
 }
 
 .previewer {
   background-color: blanchedalmond;
-  height: 35vh;
+  height: auto;
   width: 70vw;
+  padding: 2rem;
 }
