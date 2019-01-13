@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Editor from "./Editor";
 import Previewer from "./Previewer";
+import marked from "marked";
 
 class App extends Component {
   constructor(props) {
@@ -18,17 +19,16 @@ class App extends Component {
     });
   };
 
-  textConversion = () => {
-    // Grab latest copy of state text
-
-    //Convert into markdown
-  }
+  getMarkdownText = () => {
+    const rawMarkup = marked(this.state.rawText, { sanitize: true });
+    return { __html: rawMarkup };
+  };
 
   render() {
     return (
       <div className="App">
         <Editor handleChange={this.handleChange} rawText={this.state.rawText} />
-        <Previewer />
+        <Previewer marked={this.getMarkdownText()} />
       </div>
     );
   }

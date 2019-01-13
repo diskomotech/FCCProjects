@@ -1,9 +1,9 @@
 import React from "react";
 
-const Previewer = () => {
+const Previewer = ({ marked }) => {
   return (
     <div className="previewer-container">
-      <div className="previewer" />
+      <div className="previewer" dangerouslySetInnerHTML={marked} />
     </div>
   );
 };
