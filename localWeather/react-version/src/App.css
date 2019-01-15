@@ -1,32 +1,84 @@
-.App {
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:500,600,700");
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  color: #777;
+  flex-direction: column;
+  background-image: url("https://images.unsplash.com/photo-1446061595247-0a20dcf3af01?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=458bb4ace020edf1c6b7feff82b47235&auto=format&fit=crop&w=1489&q=80");
+  background-size: cover;
+  background-position: top;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.headerTitle,
+.weatherDisplay {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.headerTitle {
+  margin-top: 10rem;
+  border-radius: 10px 10px 0 0;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  margin: 0;
+  font-size: 4rem;
+  padding-top: 1.5rem;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weatherDisplay {
+  height: 30rem;
+  padding-top: 3rem;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+  border-radius: 0 0 10px 10px;
+}
+
+#locate {
+  margin-bottom: 3rem;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border: 2px solid rgba(119, 119, 119, 0.4);
+  border-radius: 3px;
+  color: #777;
+  cursor: pointer;
+}
+
+#locate:hover {
+  background-color: #777;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.iconVisible {
+  display: none;
+}
+
+.iconStyle {
+  font-size: 6rem;
+  color: #777;
 }
