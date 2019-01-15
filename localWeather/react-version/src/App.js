@@ -15,8 +15,6 @@ class App extends Component {
           </div>
           <div className="weatherDisplay">
             <button
-              type="button"
-              // className="btn btn-outline-secondary btn-lg"
               id="locate"
             >
               Show Me The Weather
@@ -28,6 +26,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+const Button = () => {
+  
 }
 
 export default App;
