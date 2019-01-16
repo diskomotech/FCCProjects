@@ -9,37 +9,37 @@ const DrumPresentational = props => {
           <div className="display" />
           <div className="drum-pad">
             <div className="top-row">
-              <div className="drum-pad__button" data-action="snare">
+              <button className="drum-pad__button" data-action="snare">
                 Q
-              </div>
-              <div className="drum-pad__button" data-action="tom">
+              </button>
+              <button className="drum-pad__button" data-action="tom">
                 W
-              </div>
-              <div className="drum-pad__button" data-action="tink">
+              </button>
+              <button className="drum-pad__button" data-action="tink">
                 E
-              </div>
+              </button>
             </div>
             <div className="mid-row">
-              <div className="drum-pad__button" data-action="kick">
+              <button className="drum-pad__button" data-action="kick">
                 A
-              </div>
-              <div className="drum-pad__button" data-action="boom">
+              </button>
+              <button className="drum-pad__button" data-action="boom">
                 S
-              </div>
-              <div className="drum-pad__button" data-action="hihat">
+              </button>
+              <button className="drum-pad__button" data-action="hihat">
                 D
-              </div>
+              </button>
             </div>
             <div className="bottom-row">
-              <div className="drum-pad__button" data-action="ride">
+              <button className="drum-pad__button" data-action="ride">
                 Z
-              </div>
-              <div className="drum-pad__button" data-action="openhat">
+              </button>
+              <button className="drum-pad__button" data-action="openhat">
                 X
-              </div>
-              <div className="drum-pad__button" data-action="clap">
+              </button>
+              <button className="drum-pad__button" data-action="clap">
                 C
-              </div>
+              </button>
             </div>
           </div>
         </div>
