@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import "./DrumMachine";
-import DrumMachine from "./DrumMachine";
+import "./DrumContainer";
+import DrumMachine from "./DrumContainer";
 
 class App extends Component {
   render() {
