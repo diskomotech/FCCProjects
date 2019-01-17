@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 
 const DrumPresentational = props => {
+  const { clicked } = props;
   return (
     <div className="container">
       <div id="drum-machine">
@@ -9,7 +10,11 @@ const DrumPresentational = props => {
           <div className="display" />
           <div className="drum-pad">
             <div className="top-row">
-              <button className="drum-pad__button" data-action="snare">
+              <button
+                className="drum-pad__button"
+                data-action="snare"
+                onClick={clicked}
+              >
                 Q
               </button>
               <button className="drum-pad__button" data-action="tom">
