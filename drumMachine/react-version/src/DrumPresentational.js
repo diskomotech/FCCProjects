@@ -2,10 +2,10 @@ import React from "react";
 import "./App.css";
 
 const DrumPresentational = props => {
-  const { clicked, buttonPressed } = props;
+  const { clicked, buttonPressed, keyPress } = props;
   return (
     <div className="container">
-      <div id="drum-machine">
+      <div id="drum-machine" onKeyPress={keyPress}>
         <div className="grid">
           <div className="display">{buttonPressed}</div>
           <div className="drum-pad">

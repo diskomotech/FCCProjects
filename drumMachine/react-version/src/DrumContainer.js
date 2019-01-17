@@ -3,6 +3,20 @@ import "./App.css";
 import "./DrumPresentational";
 import DrumPresentational from "./DrumPresentational";
 
+const keycodes = {
+  81: "Q",
+  87: "W",
+  69: "E",
+  65: "A",
+  83: "S",
+  68: "D",
+  90: "Z",
+  88: "X",
+  67: "C"
+};
+
+//TO DO: GET KEYPRESS WORKING
+
 class DrumContainer extends Component {
   constructor(props) {
     super(props);
@@ -26,6 +40,14 @@ class DrumContainer extends Component {
     }, 80);
   };
 
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyPress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyPress);
+  }
+
   handleClick = event => {
     const { action } = event.target.dataset;
     this.setState({ buttonPressed: action });
@@ -33,11 +55,16 @@ class DrumContainer extends Component {
     this.animated(event.target);
   };
 
+  handleKeyPress = event => {
+    const key = keycodes[event.keyCode];
+  };
+
   render() {
     return (
       <DrumPresentational
         clicked={this.handleClick}
         buttonPressed={this.state.buttonPressed}
+        keyPress={this.handleKeyPress}
       />
     );
   }
