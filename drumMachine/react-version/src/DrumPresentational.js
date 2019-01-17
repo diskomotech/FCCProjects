@@ -2,12 +2,12 @@ import React from "react";
 import "./App.css";
 
 const DrumPresentational = props => {
-  const { clicked } = props;
+  const { clicked, buttonPressed } = props;
   return (
     <div className="container">
       <div id="drum-machine">
         <div className="grid">
-          <div className="display" />
+          <div className="display">{buttonPressed}</div>
           <div className="drum-pad">
             <div className="top-row">
               <button
@@ -17,32 +17,64 @@ const DrumPresentational = props => {
               >
                 Q
               </button>
-              <button className="drum-pad__button" data-action="tom">
+              <button
+                className="drum-pad__button"
+                data-action="tom"
+                onClick={clicked}
+              >
                 W
               </button>
-              <button className="drum-pad__button" data-action="tink">
+              <button
+                className="drum-pad__button"
+                data-action="tink"
+                onClick={clicked}
+              >
                 E
               </button>
             </div>
             <div className="mid-row">
-              <button className="drum-pad__button" data-action="kick">
+              <button
+                className="drum-pad__button"
+                data-action="kick"
+                onClick={clicked}
+              >
                 A
               </button>
-              <button className="drum-pad__button" data-action="boom">
+              <button
+                className="drum-pad__button"
+                data-action="boom"
+                onClick={clicked}
+              >
                 S
               </button>
-              <button className="drum-pad__button" data-action="hihat">
+              <button
+                className="drum-pad__button"
+                data-action="hihat"
+                onClick={clicked}
+              >
                 D
               </button>
             </div>
             <div className="bottom-row">
-              <button className="drum-pad__button" data-action="ride">
+              <button
+                className="drum-pad__button"
+                data-action="ride"
+                onClick={clicked}
+              >
                 Z
               </button>
-              <button className="drum-pad__button" data-action="openhat">
+              <button
+                className="drum-pad__button"
+                data-action="openhat"
+                onClick={clicked}
+              >
                 X
               </button>
-              <button className="drum-pad__button" data-action="clap">
+              <button
+                className="drum-pad__button"
+                data-action="clap"
+                onClick={clicked}
+              >
                 C
               </button>
             </div>

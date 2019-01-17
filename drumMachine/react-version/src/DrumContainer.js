@@ -7,7 +7,7 @@ class DrumContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      button: ""
+      buttonPressed: ""
     };
   }
 
@@ -15,8 +15,6 @@ class DrumContainer extends Component {
     new Audio(
       `https://s3.eu-west-2.amazonaws.com/diskomotech/freeCodeCamp/drumMachine/sounds/${action}.mp3`
     ).play();
-  // Display sound name
-  // display.textContent = action;
 
   animated = buttonTarget => {
     // Add press effect animation
@@ -29,13 +27,19 @@ class DrumContainer extends Component {
   };
 
   handleClick = event => {
-    console.log("works");
-    this.playIt(event.target.dataset.action);
+    const { action } = event.target.dataset;
+    this.setState({ buttonPressed: action });
+    this.playIt(action);
     this.animated(event.target);
   };
 
   render() {
-    return <DrumPresentational clicked={this.handleClick} />;
+    return (
+      <DrumPresentational
+        clicked={this.handleClick}
+        buttonPressed={this.state.buttonPressed}
+      />
+    );
   }
 }
 
