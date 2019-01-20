@@ -3,20 +3,6 @@ import "./App.css";
 import "./DrumPresentational";
 import DrumPresentational from "./DrumPresentational";
 
-const keycodes = {
-  81: "Q",
-  87: "W",
-  69: "E",
-  65: "A",
-  83: "S",
-  68: "D",
-  90: "Z",
-  88: "X",
-  67: "C"
-};
-
-//TO DO: GET KEYPRESS WORKING
-
 class DrumContainer extends Component {
   constructor(props) {
     super(props);
@@ -56,7 +42,42 @@ class DrumContainer extends Component {
   };
 
   handleKeyPress = event => {
-    const key = keycodes[event.keyCode];
+    let buttonPressed;
+    const targetArr = Array.from(
+      event.target.querySelectorAll(".drum-pad__button")
+    );
+
+    if (event.which === 81) {
+      buttonPressed = targetArr[0];
+    }
+    if (event.which === 87) {
+      buttonPressed = targetArr[1];
+    }
+    if (event.which === 69) {
+      buttonPressed = targetArr[2];
+    }
+    if (event.which === 65) {
+      buttonPressed = targetArr[3];
+    }
+    if (event.which === 83) {
+      buttonPressed = targetArr[4];
+    }
+    if (event.which === 68) {
+      buttonPressed = targetArr[5];
+    }
+    if (event.which === 90) {
+      buttonPressed = targetArr[6];
+    }
+    if (event.which === 88) {
+      buttonPressed = targetArr[7];
+    }
+    if (event.which === 67) {
+      buttonPressed = targetArr[8];
+    }
+
+    this.setState({ buttonPressed: buttonPressed.dataset.action });
+    this.playIt(buttonPressed.dataset.action);
+    this.animated(buttonPressed);
   };
 
   render() {
