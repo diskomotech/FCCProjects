@@ -2,34 +2,47 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #bfd8d5;
+  color: #222831;
 }
 
 .editor-container {
   display: flex;
   flex-direction: column;
-  background-color: yellow;
   align-items: center;
-  height: 50vh;
+  height: 45vh;
   width: 100%;
+  margin-top: 2rem;
 }
 
 .editor-container textarea {
-  margin: 20px 0;
+  background-color: #f4f3f3;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  outline: none;
   height: 40vh;
-  width: 50vw;
+  width: 40vw;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  border: none;
 }
 
 .previewer-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aquamarine;
   width: 100%;
 }
 
 .previewer {
-  background-color: blanchedalmond;
+  background-color: #dfdfdf;
+  font-family: "Noto Sans", sans-serif;
   height: auto;
-  width: 70vw;
-  padding: 2rem;
+  width: auto;
+  line-height: 2.4rem;
+  padding: 2rem 2rem 2rem 4rem;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.15);
+  font-size: 1.3rem;
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
 }

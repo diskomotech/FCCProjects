@@ -6,6 +6,9 @@
   box-sizing: inherit;
 }
 
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway:500");
+
 html {
   font-size: 62.5%;
 }
