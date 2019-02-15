@@ -30,6 +30,8 @@ export default {};
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .calculator {
+  width: 400px;
+  margin: 0 auto;
   font-size: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -38,12 +40,13 @@ export default {};
 
 .display {
   grid-column: 1 / 5;
-  background-color: red;
+  background-color: #333;
+  color: white;
 }
 
 .btn {
   background-color: #eee;
-  border: 1px solid #333;
+  border: 1px solid #999;
 }
 
 .zero {
