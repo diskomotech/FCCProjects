@@ -98,17 +98,23 @@ export default {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.25);
 }
 
 .display {
   grid-column: 1 / 5;
-  background-color: #333;
-  color: white;
+  background-color: #373331;
+  color: #fff;
+  font-size: 1.7rem;
+  padding: 0.5rem 0.75rem;
+  text-align: right;
 }
 
 .btn {
-  background-color: #eee;
+  background-color: #fadbac;
   border: 1px solid #999;
+  text-align: center;
+  padding: 0.2rem;
 }
 
 .zero {
@@ -116,7 +122,7 @@ export default {
 }
 
 .operator {
-  background-color: orange;
-  color: white;
+  background-color: #e88c5d;
+  color: #fff;
 }
 </style>
