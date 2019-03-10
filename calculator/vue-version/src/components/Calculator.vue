@@ -104,7 +104,7 @@ export default {
 .display {
   grid-column: 1 / 5;
   background-color: #373331;
-  color: #fff;
+  color: #fefefe;
   font-size: 1.7rem;
   padding: 0.5rem 0.75rem;
   text-align: right;
@@ -123,6 +123,6 @@ export default {
 
 .operator {
   background-color: #e88c5d;
-  color: #fff;
+  color: #fefefe;
 }
 </style>
